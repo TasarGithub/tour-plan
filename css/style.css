@@ -469,6 +469,24 @@ ul {
   background-color: #0A223D;
 }
 
+.menu-btn {
+  width: 16px;
+  height: 11px;
+  display: none;
+  border: none;
+  padding: 0;
+}
+
+.menu-btn__line {
+  width: 16px;
+  height: 1px;
+  background-color: #333333;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
 .search {
   position: relative;
   display: -webkit-box;
@@ -542,6 +560,7 @@ ul {
   height: 40px;
   width: 40px;
   object-fit: cover;
+  background: url("../img/user-avatar.jpg") no-repeat center/cover;
 }
 
 .user__name {
@@ -750,12 +769,20 @@ ul {
   }
 
   .menu {
-    padding: 20.5px 0;
+    padding: 22px 0;
   }
 
   .menu__link {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .logo {
+    width: 132px;
+  }
+
+  .logo {
+    width: 99px;
   }
 }
 
@@ -763,6 +790,34 @@ ul {
   .container {
     max-width: 700px;
     width: 92%;
+  }
+
+  .navbar__user {
+    display: none;
+  }
+
+  .menu-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .menu {
+    display: none;
   }
 }
 

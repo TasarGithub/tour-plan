@@ -34,6 +34,12 @@
 		justify-content: space-between
 		align-items: center
 		max-width: 107px
+		@media screen and ( max-width: 768px)
+			display: none
+
+
+
+
 	
 
 	&__bottom
@@ -41,6 +47,25 @@
 		// max-height: 80px
 		// @media screen and ( max-width: 992px)
 		// 	max-height: 60px
+
+
+.menu-btn
+	width: 16px
+	height: 11px
+	display: none
+	border: none
+	padding: 0
+	@media screen and ( max-width: 768px)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__line
+		width: 16px
+		height: 1px
+		background-color: $text-color
+		// @media screen and ( max-width: 768px)
+	&:hover
+		cursor: pointer
 
 .search
 	position: relative
@@ -50,6 +75,9 @@
 	height: 40px
 	@media screen and ( max-width: 992px)
 		height: 30px
+	@media screen and ( max-width: 768px)
+		display: none
+
 	&__input
 		background-color: $light-grey
 		width: 350px
@@ -83,7 +111,9 @@
 	justify-content: space-between
 	align-items: center
 	@media screen and ( max-width: 992px)
-		padding: 20.5px 0
+		padding: 22px 0
+	@media screen and ( max-width: 768px)
+		display: none
 
 
 .menu__item 
@@ -103,6 +133,10 @@
 
 .logo
 	width: 177px // если поставить др картинку, надо чтобы сохранилась размер занимаемого места. Можно не max-width, тк контроль будет на адаптиве в медиазапросах
+	@media screen and ( max-width: 992px)
+		width: 132px
+	@media screen and ( max-width: 992px)
+		width: 99px
 
 
 .logo__img 
@@ -117,6 +151,7 @@
 	height: 40px 
 	width: 40px
 	object-fit: cover
+	background: url('../img/user-avatar.jpg') no-repeat center/cover;
 
 .user__name
 	margin-left: 18px
