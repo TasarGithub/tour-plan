@@ -417,26 +417,6 @@ ul {
   margin: 0;
 }
 
-.logo {
-  width: 177px;
-}
-
-.user {
-  text-decoration: none;
-  color: inherit;
-}
-
-.user__avatar {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  object-fit: cover;
-}
-
-.user__name {
-  margin-left: 18px;
-}
-
 .container {
   max-width: 1110px;
   margin: 0 auto;
@@ -457,40 +437,6 @@ ul {
   align-items: center;
   max-height: 120px;
   padding: 40px 0;
-}
-
-.navbar .search {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  border-radius: 6px;
-  height: 40px;
-}
-
-.navbar .search__input {
-  background-color: #F5FAFE;
-  width: 350px;
-  height: 40px;
-  font-size: 12px;
-  line-height: 15px;
-  border: none;
-  color: inherit;
-  padding-left: 0 75px 0 23px;
-  height: 100%;
-}
-
-.navbar .search__button {
-  height: 100%;
-  width: 65px;
-  border: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #EC1F46;
-  z-index: 10;
 }
 
 .navbar__logo {
@@ -523,9 +469,43 @@ ul {
   background-color: #0A223D;
 }
 
+.search {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.search__input {
+  background-color: #F5FAFE;
+  width: 350px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  color: inherit;
+  padding-left: 0 75px 0 23px;
+  height: 100%;
+}
+
+.search__button {
+  height: 100%;
+  width: 65px;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #EC1F46;
+  z-index: 10;
+}
+
 .menu {
   width: 100%;
-  padding: 31px 0;
+  padding: 30.5px 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -546,6 +526,26 @@ ul {
   color: #ffffff;
   text-transform: uppercase;
   line-height: 18px;
+}
+
+.logo {
+  width: 177px;
+}
+
+.user {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user__avatar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+.user__name {
+  margin-left: 18px;
 }
 
 .modal,
@@ -734,7 +734,35 @@ ul {
 
 @media screen and (max-width: 992px) {
   .container {
-    max-width: 760px;
+    max-width: 700px;
+  }
+
+  .navbar__search {
+    margin-left: auto;
+  }
+
+  .search {
+    height: 30px;
+  }
+
+  .search__input {
+    width: 340px;
+  }
+
+  .menu {
+    padding: 20.5px 0;
+  }
+
+  .menu__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 700px;
+    width: 92%;
   }
 }
 

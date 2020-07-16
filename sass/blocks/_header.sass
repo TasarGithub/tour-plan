@@ -13,33 +13,6 @@
 		padding: 40px 0
 		// border: 1px solid red
 
-	.search
-		position: relative
-		display: flex
-		overflow: hidden
-		border-radius: 6px
-		height: 40px
-		&__input
-			background-color: $light-grey
-			width: 350px
-			height: 40px
-			font-size: 12px
-			line-height: 15px
-			border: none
-
-			color: inherit
-			padding-left: 0 75px 0 23px	
-			height: 100%
-		&__button
-			height: 100%
-			width: 65px
-			border: none
-			position: absolute
-			right: 0
-			top: 0
-			background-color: $primary
-			z-index: 10
-		
 
 	&__search
 
@@ -53,6 +26,8 @@
 	&__search
 		margin-right: auto
 		margin-left: 108px
+		@media screen and ( max-width: 992px)
+			margin-left: auto
 
 	&__user
 		display: flex
@@ -63,14 +38,52 @@
 
 	&__bottom
 		background-color: $dark
+		// max-height: 80px
+		// @media screen and ( max-width: 992px)
+		// 	max-height: 60px
+
+.search
+	position: relative
+	display: flex
+	overflow: hidden
+	border-radius: 6px
+	height: 40px
+	@media screen and ( max-width: 992px)
+		height: 30px
+	&__input
+		background-color: $light-grey
+		width: 350px
+		height: 40px
+		font-size: 12px
+		line-height: 15px
+		border: none
+		color: inherit
+		padding-left: 0 75px 0 23px	
+		height: 100%
+		@media screen and ( max-width: 992px)
+			width: 340px
+
+	&__button
+		height: 100%
+		width: 65px
+		border: none
+		position: absolute
+		right: 0
+		top: 0
+		background-color: $primary
+		z-index: 10
+		
+
 
 
 .menu
 	width: 100%
-	padding: 31px 0
+	padding: 30.5px 0
 	display: flex
 	justify-content: space-between
 	align-items: center
+	@media screen and ( max-width: 992px)
+		padding: 20.5px 0
 
 
 .menu__item 
@@ -81,11 +94,32 @@
 	color: $light
 	text-transform: uppercase
 	line-height: 18px
+	@media screen and ( max-width: 992px)
+		font-size: 12px
+		line-height: 15px
 
-		
 
 
 
+.logo
+	width: 177px // если поставить др картинку, надо чтобы сохранилась размер занимаемого места. Можно не max-width, тк контроль будет на адаптиве в медиазапросах
+
+
+.logo__img 
+
+.user
+	text-decoration: none
+	color: inherit
+
+.user__avatar
+	border-radius: 50%
+	
+	height: 40px 
+	width: 40px
+	object-fit: cover
+
+.user__name
+	margin-left: 18px
 
 
 
