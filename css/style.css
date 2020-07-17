@@ -422,6 +422,10 @@ ul {
   margin: 0 auto;
 }
 
+.navbar__wrap {
+  margin: 0 0 18px 0;
+}
+
 .navbar__top {
   display: -webkit-box;
   display: -webkit-flex;
@@ -566,6 +570,32 @@ ul {
 
 .user__name {
   margin-left: 18px;
+}
+
+.breadcrumbs {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.breadcrumbs__container {
+  margin-bottom: 19px;
+}
+
+.breadcrumbs__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  content: "/";
+  margin: 0 4px 0 3px;
+}
+
+.breadcrumbs__item > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .modal,

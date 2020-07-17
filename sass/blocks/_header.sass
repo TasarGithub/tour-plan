@@ -1,9 +1,8 @@
 .navbar
 	//background: linear-gradient(to top, $dark 40%, transparent 0%)
 	// background-color: #fff
-
-
-
+	&__wrap
+		margin: 0 0 18px 0
 
 	&__top
 		display: flex
@@ -13,14 +12,11 @@
 		padding: 40px 0
 		// border: 1px solid red
 
-
 	&__search
 
 	&__logo
 		display: block
 		max-height: 24px
-
-
 
 
 	&__search
@@ -37,10 +33,6 @@
 		@media screen and ( max-width: 768px)
 			display: none
 
-
-
-
-	
 
 	&__bottom
 		background-color: $dark
@@ -80,7 +72,7 @@
 		display: none
 
 	&__input
-		background-color: $light-grey
+		background-color: $secondary
 		width: 350px
 		height: 40px
 		font-size: 12px
