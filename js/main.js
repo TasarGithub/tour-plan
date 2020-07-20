@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 
 
-
+	// Табы для блока фантазий
   $('.fantasies__item').each(function(index, item){
 
     $(item).click(function(event) {
@@ -177,11 +177,16 @@ $(document).ready(function () {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
+    // // pagination: {
+    // //   el: '.swiper-pagination',
+    // //   type: 'bullets',
+    // //   clickable: true,
+		// // },
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+		},
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -189,10 +194,11 @@ $(document).ready(function () {
   });
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+  // //var bullets = $('.swiper-pagination');
   
-  next.css('left',prev.width() + 6 + bullets.width() + 32);
-  bullets.css('left',prev.width() + 21);
+  // next.css('left',prev.width() + 6 + bullets.width() + 32);
+	
+	// // bullets.css('left',prev.width() + 21);
 
 
 
