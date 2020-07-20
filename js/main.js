@@ -190,7 +190,8 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
+		}
+		
   });
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
@@ -495,120 +496,36 @@ $(document).ready(function () {
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/TvVYeLvujLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
- function topArrow(){
-    const totop = document.querySelector('.totop'),
-      hero = document.querySelector('.hero');
+//  function topArrow(){
+//     const totop = document.querySelector('.totop'),
+//       hero = document.querySelector('.hero');
  
-    totop.style.opacity = 0;
+//     totop.style.opacity = 0;
      
-    const base = hero.offsetTop;
+//     const base = hero.offsetTop;
     
 
-     window.addEventListener('scroll', function(){    
-      if (window.pageYOffset > base ) {
-        totop.style.opacity = 1;
-      } else {
-        totop.style.opacity = 0;
-      }
-    });
-  }
+//      window.addEventListener('scroll', function(){    
+//       if (window.pageYOffset > base ) {
+//         totop.style.opacity = 1;
+//       } else {
+//         totop.style.opacity = 0;
+//       }
+//     });
+//   }
   
-  topArrow();
+//   topArrow();
 
-  $("#totop").click(function(){
-    //Необходимо прокрутить в начало страницы
-    var curPos=$(document).scrollTop();
-    var scrollTime=curPos/1.73;
-    $("body,html").animate({"scrollTop":0},scrollTime);
-    });
+//   $("#totop").click(function(){
+//     //Необходимо прокрутить в начало страницы
+//     var curPos=$(document).scrollTop();
+//     var scrollTime=curPos/1.73;
+//     $("body,html").animate({"scrollTop":0},scrollTime);
+//     });
 
-    //плавная прокрутка при нажимании на пункты меню
-    // $(document).ready(function(){
-    //   $("a[href^='#']").bind("click", function(e){
-    //   var anchor = $(this);
-    //   $('html, body').stop().animate({"scrollTop": $(anchor.attr('href')).offset().top - 100
-    //   }, 1000);
-    //     e.preventDefault();
-    //   });
-    //     return false;
-    //   });
-
-
-    const mySwiperSix = new Swiper('.six-step__swiper-container', {
-      loop: true,
-      pagination: {
-         el: '.swiper-pagination',
-         type: 'bullets',
-         clickable: true,
-      },
-   
-      navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev',
-      }
-
-  });
-  var nextSix = $('.six-step__swiper-button-next');
-  var prevSix = $('.six-step__swiper-button-prev');
-  var bulletsSix = $('.six-step__swiper-pagination');
-  
-  nextSix.css('left',prevSix.width() + 6 + bulletsSix.width() + 32);
-  bulletsSix.css('left',prevSix.width() + 21);
-
-
-  $('.six-step__swiper-menu').on('click', '.six-step__swiper-menu-item', function() {
-    const index = $(this).data('index');
-    //console.log('index: ', index);
-    mySwiperSix.slideTo(index);
- });
- 
-  mySwiperSix.on('transitionEnd', function() {
-    
-    var firstPart = $('#six-step__first');
-    
-    firstPart.fadeTo(1, 0);
-    
-   $('#six-step__first').text(mySwiperSix.realIndex+1);
-
-    firstPart.fadeTo(700, 1);
-    //$('.six-step__swiper-menu-item')[mySwiperSix.realIndex].fadeTo(700, 1);
-    $('.six-step__swiper-menu-item').fadeTo(1, 0.3);
-    $('.six-step__swiper-menu-item').each(function(index, element){
-      
-      if (index === mySwiperSix.realIndex ) {
-        //console.log('element: ', element);
-        $(element).fadeTo(700, 1);
-        
-      }
-    });
-
- 
-
-  });
 
 
   //плавная прокрутка
-  // $("body").on('click', '[href*="#"]', function(e){
-  //   var target = e.target;
-  //   console.log('$target: ', $(target));
-  //   var fixed_offset = 100;
-  //   console.log('$(this.hash): ', $(this.hash));
-  //   $('html,body').animate({ scrollTop: $(target).offset().top}, 1000);
-    
-  //   e.preventDefault();
-  // });
-
-//   $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
-//     e.preventDefault();
-//     console.log('$(this): ', $(this));
-//     var t = 1000;
-//     //var d = $(this).attr('href') ? $(this).attr('data-href') : $(this).attr('href');
-//     var d = $(this).attr('href');
-//     console.log('$(this).attr(href): ', $(this).attr('href'));
-//     console.log('$(d): ', $(d));
-//     $('html,body').stop().animate({ scrollTop: $(this).offset().top }, t);
-    
-// });
 
   $('a[href^="#"]').on('click',function (e) {
     e.preventDefault();
