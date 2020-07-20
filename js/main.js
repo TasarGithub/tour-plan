@@ -188,13 +188,13 @@ $(document).ready(function () {
 		},
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button--next',
+      prevEl: '.swiper-button--prev',
 		}
 		
   });
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
+  var next = $('.swiper-button--next');
+  var prev = $('.swiper-button--prev');
   // //var bullets = $('.swiper-pagination');
   
   // next.css('left',prev.width() + 6 + bullets.width() + 32);

@@ -1,0 +1,81 @@
+.hotel-body
+	@media screen and ( max-width: 320px)
+		padding: 20px 0 70px 0
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__slider
+	
+	&__slide
+		&-1
+			background: url('../img/slider/foto-1.jpg') no-repeat center/cover
+		&-2
+			background: url('../img/slider/foto-2.jpg') no-repeat center/cover
+		&-3
+			background: url('../img/slider/foto-3.jpg') no-repeat center/cover
+		&-4
+			background: url('../img/slider/foto-4.jpg') no-repeat center/cover
+		&-5
+			background: url('../img/slider/foto-5.jpg') no-repeat center/cover
+		&-6
+			background: url('../img/slider/foto-6.jpg') no-repeat center/cover
+		&-7
+			background: url('../img/slider/foto-7.jpg') no-repeat center/cover
+		&-8
+			background: url('../img/slider/foto-8.jpg') no-repeat center/cover
+		&-9
+			background: url('../img/slider/foto-9.jpg') no-repeat center/cover
+			
+
+
+	// &__foto
+
+.swiper
+	&-container
+		position: relative
+		width: 728px
+		height: 450px
+		@media screen and ( max-width: 992px)
+			width: 700px
+			height: 450px
+		@media screen and ( max-width: 768px)
+			width: 91.1458vw
+			height: 56vw
+		@media screen and ( max-width: 320px)
+			width: 278.44px
+			height: 179px
+	&-slide
+		position: relative
+		border-radius: 8px
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+			// background-color: rgba($dark, 0.7)
+			border-radius: 8px
+			// z-index: 10
+
+	&-button
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 30px
+		height: 30px
+		color: rgba(255, 255, 255, 0.8)
+		z-index: 10
+		background-size: 10px
+		background-position: center
+		background-repeat: no-repeat
+		border: none
+		cursor: pointer
+		&--prev
+			left: 2.57%
+			background-image: url('../img/slider/arrow-prev.svg')
+		&--next
+			right: 2.57%
+			background-image: url('../img/slider/arrow-next.svg')
