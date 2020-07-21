@@ -426,16 +426,12 @@ span {
 
 button {
   outline: none;
+  border: none;
 }
 
 .container {
   max-width: 1110px;
   margin: 0 auto;
-}
-
-.button {
-  background-color: #EC1F46;
-  border: none;
 }
 
 .navbar__top {
@@ -822,6 +818,7 @@ button {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .swiper-button--prev {
