@@ -781,6 +781,18 @@ button {
   background: url("../img/slider/foto-9.jpg") no-repeat center/cover;
 }
 
+.hotel-body__slide-10 {
+  background: url("../img/slider/foto-10.jpg") no-repeat center/cover;
+}
+
+.hotel-body__slide-11 {
+  background: url("../img/slider/foto-11.jpg") no-repeat center/cover;
+}
+
+.hotel-body__slide-12 {
+  background: url("../img/slider/foto-12.jpg") no-repeat center/cover;
+}
+
 .swiper-container {
   position: relative;
   width: 728px;
