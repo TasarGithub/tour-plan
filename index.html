@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="//api-maps.yandex.ru">
+	<link rel="dns-prefetch" href="//api-maps.yandex.ru">
 	<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 	<!-- font-family: 'Muli', sans-serif;
 	font-family: 'Nunito', sans-serif; -->
@@ -169,8 +171,7 @@
 					<button class="booking__btn-order">View&nbsp;Other&nbsp;Options</button>
 				</div>
 				<!-- /.booking__booking -->
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0413263625383!2d98.29254741537976!3d7.890745494315387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1595424306338!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<div class="map" id="map">
 				</div>
 				<!-- /.booking__geo -->
 			</div>
@@ -190,6 +191,57 @@
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.mask.min.js"></script>
+
+<!-- Отложенная Загрузка яндекс-карт -->
+<script> 
+ 
+	setTimeout(function(){
+		var elem = document.createElement('script');
+		elem.type = 'text/javascript';
+		elem.src ='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
+		document.getElementsByTagName('body')[0].appendChild(elem);
+	}, 2000);
+
+	function getYaMap(){
+			var myMap = new ymaps.Map('map', {
+							center: [7.890703, 98.294772],
+							zoom: 15
+					}, {
+							searchControlProvider: 'yandex#search'
+					}),
+
+					// Создаём макет содержимого.
+					MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+							'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+					),
+
+					myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+							hintContent: 'DoubleTree by Hilton Phuket Banthai Resort',
+							balloonContent: 'тут был Артём'
+					}, {
+							// Опции.
+							// autoFitToViewport: 'ifNull',
+							// searchControlProvider: 'yandex#search',
+							// Необходимо указать данный тип макета.
+							iconLayout: 'default#image',
+							// Своё изображение иконки метки.
+							iconImageHref: 'img/location.png',
+							// Размеры метки.
+							iconImageSize: [32, 32],
+							// Смещение левого верхнего угла иконки относительно
+							// её "ножки" (точки привязки).
+							iconImageOffset: [-5, -38]
+					});
+					myMap.behaviors.disable('scrollZoom');
+			// myMap.container.fitToViewport();
+
+			myMap.geoObjects
+					.add(myPlacemark);
+			
+	}
+
+</script>
+
 
 <script src="js/main.js"></script>
 
