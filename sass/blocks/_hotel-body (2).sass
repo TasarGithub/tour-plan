@@ -1,0 +1,209 @@
+.hotel-body
+	@media screen and ( max-width: 320px)
+		padding: 20px 0 70px 0
+	&__container
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 992px)
+			flex-direction: column
+		// align-items: center
+	&__slider
+	
+	&__slide
+		&-1
+			background: url('../img/slider/foto-1.jpg') no-repeat center/cover
+		&-2
+			background: url('../img/slider/foto-2.jpg') no-repeat center/cover
+		&-3
+			background: url('../img/slider/foto-3.jpg') no-repeat center/cover
+		&-4
+			background: url('../img/slider/foto-4.jpg') no-repeat center/cover
+		&-5
+			background: url('../img/slider/foto-5.jpg') no-repeat center/cover
+		&-6
+			background: url('../img/slider/foto-6.jpg') no-repeat center/cover
+		&-7
+			background: url('../img/slider/foto-7.jpg') no-repeat center/cover
+		&-8
+			background: url('../img/slider/foto-8.jpg') no-repeat center/cover
+		&-9
+			background: url('../img/slider/foto-9.jpg') no-repeat center/cover
+		&-10
+			background: url('../img/slider/foto-10.jpg') no-repeat center/cover
+		&-11
+			background: url('../img/slider/foto-11.jpg') no-repeat center/cover
+		&-12
+			background: url('../img/slider/foto-12.jpg') no-repeat center/cover
+
+
+	// hotel-body__info
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+
+
+
+.booking
+	display: flex
+	flex-direction: column
+
+	max-width: 350px
+	height: 210px
+	padding: 28px 
+	background-color: $dark
+	border-radius: 8px
+	color: $light
+	font-family: 'Nunito', sans-serif
+	font-style: normal
+	font-weight: normal
+	flex-direction: row
+
+	&__row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 9px
+
+	&__col50
+		flex: 0 0 140px
+		display: flex
+		flex-direction: column
+
+	&__price-starts
+		font-size: 10px
+		line-height: 14px
+
+	&__price
+		font-weight: 800
+		font-size: 24px
+		line-height: 30px
+	&__per-room 
+		font-size: 12px
+		line-height: 16px
+		
+
+	&__2Guests, &__1room, &__telephone
+		display: flex
+		width: 80px
+		justify-content: space-between
+		align-items: center
+		font-size: 12px
+		line-height: 16px
+		margin-left: auto
+
+
+	&__2Guests
+		margin-bottom: 8px
+		margin-top: 	6px
+		&::before
+			content: ""
+			width: 14px
+			height: 14px
+			background: url('../img/user.svg') no-repeat center/cover
+	&__1room
+		&::before
+			content: ""
+			width: 14px
+			height: 14px
+			background: url('../img/home.svg') no-repeat center/cover
+
+	&__call-center
+		display: flex
+		justify-content: space-between
+		margin-bottom: 17px
+
+	&__title
+		font-weight: 600
+		font-size: 18px
+		line-height: 25px	
+
+	&__telephone
+		font-weight: 600
+		font-size: 18px
+		line-height: 25px
+		text-decoration: none
+		color: inherit
+		&::before
+			content: ""
+			width: 14px
+			height: 14px			
+			background: url('../img/phone-call.svg') no-repeat center/cover
+
+
+
+
+	&__btn-order
+		max-width: 295px
+		min-height: 45px
+		padding: 13px 84px
+		font-weight: 600
+		font-size: 14px
+		line-height: 19px
+		background-color: $primary
+		border-radius: 4px
+		color: $light
+
+
+.map
+	width: 347px
+	height: 213px
+	background-color: red
+	border-radius: 8px
+
+.swiper
+	&-container
+		position: relative
+		width: 728px
+		height: 450px
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+			// background-color: rgba($dark, 0.7)
+			border-radius: 8px
+			overflow: hidden
+			z-index: 10
+		@media screen and ( max-width: 1200px)
+			width: 600px
+			// height: 450px
+		@media screen and ( max-width: 992px)
+			width: 700px
+			height: 450px
+		@media screen and ( max-width: 768px)
+			width: 91.1458vw
+			height: 56vw
+		@media screen and ( max-width: 320px)
+			width: 278.44px
+			height: 179px
+	&-slide
+		position: relative
+		border-radius: 8px
+		overflow: hidden
+
+
+	&-button
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 30px
+		height: 30px
+		color: rgba(255, 255, 255, 0.8)
+		z-index: 10
+		background-size: 10px
+		background-position: center
+		background-repeat: no-repeat
+		border: none
+		cursor: pointer
+		background-color: transparent
+		z-index: 20
+		&--prev
+			left: 2.57%
+			background-image: url('../img/slider/arrow-prev.svg')
+		&--next
+			right: 2.57%
+			background-image: url('../img/slider/arrow-next.svg')
