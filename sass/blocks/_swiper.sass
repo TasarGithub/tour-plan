@@ -3,6 +3,25 @@
 		position: relative
 		width: 728px
 		height: 450px
+		@media screen and ( max-width: 1200px)
+			width: 590px
+		//	height: 37.5vw//450/1200=0.375
+		@media screen and ( max-width: 992px) //0.705645*576=406.45152
+			width: 100%
+			height: 372px //height: 40.32vw //400/992=0.403226//height: 372px
+		@media screen and ( max-width: 768px)
+			// width: 100%//542px
+			height: 45.5729vw //350/768=0.455729
+		@media screen and ( max-width: 576px)
+			// width: 406px
+			height: 48.61vw //280/576=0.486111//280px
+		@media screen and ( max-width: 320px)
+			width: 278px
+			height: 179px
+	&-slide
+		position: relative
+		width: 100%
+		margin: 0 auto
 		&::after
 			content: ""
 			position: absolute
@@ -15,22 +34,9 @@
 			border-radius: 8px
 			overflow: hidden
 			z-index: 10
-		@media screen and ( max-width: 1200px)
-			width: 590px
-			// height: 450px
-		@media screen and ( max-width: 992px)
-			width: 700px
-			height: 450px
-		@media screen and ( max-width: 768px)
-			width: 91.1458vw
-			height: 56vw
-		@media screen and ( max-width: 320px)
-			width: 278.44px
-			height: 179px
-	&-slide
-		position: relative
-		border-radius: 8px
-		overflow: hidden
+		&-active
+			margin-right: 1px
+
 
 
 	&-button

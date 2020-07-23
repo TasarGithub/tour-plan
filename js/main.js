@@ -525,6 +525,7 @@ $(document).ready(function () {
 
 
 
+
   //плавная прокрутка
 
   $('a[href^="#"]').on('click',function (e) {
@@ -542,6 +543,21 @@ $(document).ready(function () {
       }
     }
   });
+
+	// $(window).resize(function (e) {
+	// 	if ($(window).width() <= 768) {
+	// 		var widthSwiperCont = $("#map").width(),
+	// 		widthSwiperContFixed;
+	// 		widthSwiperContFixed = widthSwiperCont.toFixed();
+	// 		$('.swiper-container').css("width", widthSwiperContFixed);
+	// 		console.log('$(swiper-container).width()', widthSwiperCont);
+	// 		console.log('$(swiper-container).width().toFixed(): ', widthSwiperContFixed);
+		
+	// 	}
+
+
+	// });
+
 
 });
 
