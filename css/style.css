@@ -1029,6 +1029,7 @@ button {
   position: relative;
   padding: 98px 0 87px;
   background: url("../img/bg-subscribe.jpg") no-repeat center/cover;
+  background-attachment: fixed;
 }
 
 .subscribe::before {
@@ -1546,5 +1547,9 @@ button {
   *::after {
     display: block;
     position: absolute;
+  }
+
+  .hotel-name__text {
+    width: 390px;
   }
 }
