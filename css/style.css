@@ -1044,6 +1044,7 @@ button {
 
 .subscribe__container {
   max-width: 731px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -201,6 +201,27 @@ $(document).ready(function () {
 	
 	// // bullets.css('left',prev.width() + 21);
 
+  //initialize swiper when document ready
+  var mySwiperReveiwes = new Swiper ('.swiper-container-reviews', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    // // pagination: {
+    // //   el: '.swiper-pagination',
+    // //   type: 'bullets',
+    // //   clickable: true,
+		// // },
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+		},
+
+    navigation: {
+      nextEl: '.swiper-button-reveiwes--next',
+      prevEl: '.swiper-button-reveiwes--prev',
+		}
+		
+  });
 
 
   //anime
