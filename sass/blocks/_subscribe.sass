@@ -1,0 +1,68 @@
+.subscribe 
+	position: relative
+	padding: 98px 0 87px
+	background: url('../img/bg-subscribe.jpg') no-repeat center/cover
+	@media screen and ( max-width: 768px)
+		padding: 92px 0 93px
+	@media screen and ( max-width: 768px)
+		padding: 76px 0 83px
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: rgba(10, 34, 61, 0.8)
+		// z-index: 20
+
+	&__container 
+		max-width: 731px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media screen and ( max-width: 768px)
+			max-width: 700px
+			flex-direction: column
+			align-items: flex-start
+		// @media screen and ( max-width: 576px)
+			
+
+	&__text
+		color: $light
+		z-index: 10
+		padding: 0 20px 37px 0
+
+	&__subtitle
+		font-weight: 300
+		font-size: 24px
+		line-height: 30px
+		@media screen and ( max-width: 320px)
+			font-size: 20px
+			line-height: 25px
+			margin: 0 0 5px 0
+
+	&__title
+		font-weight: 600
+		font-size: 36px
+		line-height: 45px
+		text-transform: uppercase
+		@media screen and ( max-width: 320px)
+			font-size: 30px
+			line-height: 38px
+
+	&__form
+		height: 55px
+		@media screen and ( max-width: 768px)
+			width: 100%
+	&--input
+		padding: 0 75px 0 23px
+		color: $text-light
+		@media screen and ( max-width: 768px)
+			width: 100%
+		&::placeholder
+			color: $text-light
+		&::-moz-placeholder, :-moz-placeholder
+			opacity: 1
+
+

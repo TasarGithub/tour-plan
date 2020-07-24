@@ -15,18 +15,25 @@
 			padding: 27px 0
 		// border: 1px solid red
 
-	&__search
+
 
 	&__logo
 		display: block
 		max-height: 24px
 
 
-	&__search
+	&__form
 		margin-right: auto
 		margin-left: 108px
 		@media screen and ( max-width: 992px)
 			margin-left: auto
+			height: 30px
+		@media screen and ( max-width: 768px)
+			display: none
+	&--input
+		@media screen and ( max-width: 992px)
+			width: 340px
+
 
 	&__user
 		display: flex
@@ -63,29 +70,22 @@
 	&:hover
 		cursor: pointer
 
-.search
+.form
 	position: relative
 	display: flex
 	overflow: hidden
 	border-radius: 6px
 	height: 40px
-	@media screen and ( max-width: 992px)
-		height: 30px
-	@media screen and ( max-width: 768px)
-		display: none
 
 	&__input
 		background-color: $secondary
 		width: 350px
-		height: 40px
 		font-size: 12px
 		line-height: 15px
 		border: none
 		color: inherit
 		padding: 0 75px 0 23px	
-		height: 100%
-		@media screen and ( max-width: 992px)
-			width: 340px
+
 
 	&__button
 		height: 100%
@@ -95,7 +95,8 @@
 		right: 0
 		top: 0
 		background-color: $primary
-		z-index: 10
+		color: $light
+
 		
 
 
