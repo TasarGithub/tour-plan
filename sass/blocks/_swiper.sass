@@ -3,6 +3,18 @@
 		position: relative
 		width: 728px
 		height: 450px
+		border-radius: 8px
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			width: 100%
+			background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+			border-radius: 8px
+			overflow: hidden
+			z-index: 10
 		@media screen and ( max-width: 1200px)
 			width: 590px
 		//	height: 37.5vw//450/1200=0.375
@@ -19,24 +31,8 @@
 			width: 278px
 			height: 179px
 	&-slide
-		position: relative
-		width: 100%
-		margin: 0 auto
-		&::after
-			content: ""
-			position: absolute
-			top: 0
-			left: 0
-			height: 100%
-			width: 100%
-			background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
-			// background-color: rgba($dark, 0.7)
-			border-radius: 8px
-			overflow: hidden
-			z-index: 10
 		&-active
 			margin-right: 1px
-
 
 
 	&-button

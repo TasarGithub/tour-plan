@@ -743,57 +743,16 @@ button {
   justify-content: space-between;
 }
 
-.hotel-body__slider {
-  border-radius: 8px;
-  overflow: hidden;
+.hotel-body__slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.hotel-body__slide-1 {
-  background: url("../img/slider/foto-1.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-2 {
-  background: url("../img/slider/foto-2.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-3 {
-  background: url("../img/slider/foto-3.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-4 {
-  background: url("../img/slider/foto-4.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-5 {
-  background: url("../img/slider/foto-5.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-6 {
-  background: url("../img/slider/foto-6.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-7 {
-  background: url("../img/slider/foto-7.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-8 {
-  background: url("../img/slider/foto-8.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-9 {
-  background: url("../img/slider/foto-9.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-10 {
-  background: url("../img/slider/foto-10.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-11 {
-  background: url("../img/slider/foto-11.jpg") no-repeat center/cover;
-}
-
-.hotel-body__slide-12 {
-  background: url("../img/slider/foto-12.jpg") no-repeat center/cover;
+.hotel-body__slider-img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .hotel-body__info {
@@ -823,15 +782,10 @@ button {
   position: relative;
   width: 728px;
   height: 450px;
+  border-radius: 8px;
 }
 
-.swiper-slide {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.swiper-slide::after {
+.swiper-container::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1110,6 +1064,68 @@ button {
 .subscribe--input::-moz-placeholder,
 .subscribe--input :-moz-placeholder {
   opacity: 1;
+}
+
+.reviews {
+  padding: 40px 0 70px;
+}
+
+.reviews__container {
+  max-width: 1074px;
+}
+
+.reviews__title {
+  margin: 0 auto 115px;
+  text-align: center;
+}
+
+.reviews__data {
+  max-width: 97px;
+  margin: 0 auto 32px;
+}
+
+.reviews__foto {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.reviews__foto-1 {
+  background: url("../img/reveiwes/foto-1.jpg") no-repeat center/cover;
+}
+
+.reviews__name {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #EC1F46;
+}
+
+.reviews__stayed {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.reviews__rating {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 10px;
+}
+
+.reviews__text {
+  max-width: 537px;
+  font-size: 12px;
+  line-height: 19px;
+  margin: 0 auto;
+}
+
+.swiper-slide::after {
+  display: none;
 }
 
 .modal,
