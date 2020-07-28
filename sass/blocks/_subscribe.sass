@@ -1,12 +1,14 @@
 .subscribe 
 	position: relative
 	padding: 98px 0 87px
-	background: url('../img/bg-subscribe.jpg') no-repeat center/cover
-	background-attachment: fixed
+	background: transparent
+	min-height: 250px
+	// background: url('../img/bg-subscribe.jpg') no-repeat center/cover
+	// background-attachment: fixed
 	@media screen and ( max-width: 768px)
 		padding: 92px 0 93px
 	@media screen and ( max-width: 768px)
-		padding: 76px 0 83px
+		padding: 76px 20px 83px
 	&::before
 		content: ""
 		position: absolute
@@ -40,6 +42,7 @@
 		font-size: 24px
 		line-height: 30px
 		@media screen and ( max-width: 320px)
+			display: block
 			font-size: 20px
 			line-height: 25px
 			margin: 0 0 5px 0

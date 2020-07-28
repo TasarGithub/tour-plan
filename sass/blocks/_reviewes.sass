@@ -1,12 +1,25 @@
 .reviews
 	padding: 40px 0 70px
 	background-color: $secondary
+	@media screen and ( max-width: 768px)
+		padding: 40px 0 60px
+	@media screen and ( max-width: 320px)
+		padding: 40px 0 50px
 	&__container
 		max-width: 1074px
+		margin: 0 auto
+		@media screen and ( max-width: 992px)
+			width: 700px
+		@media screen and ( max-width: 768px)
+			max-width: 700px
+			width: 91.1458%
+
 	&--swiper
-		width: 1074px
+		// max-width: 1074px
+
+
 	&__swiper
-		border: 1px solid red
+
 
 
 	&__slide
@@ -15,7 +28,6 @@
 
 
 	&__title
-		// display: inline-block
 		margin: 0 auto 95px
 		text-align: center
 		font-weight: bold
@@ -23,6 +35,9 @@
 		line-height: 45px
 		text-align: center
 		text-transform: uppercase
+		@media screen and ( max-width: 768px)
+			font-size: 18px
+			line-height: 23px
 
 	&__data
 		max-width: 97px
@@ -39,13 +54,10 @@
 		background-size: cover
 		margin-bottom: 9px
 		position: relative
-		
-		// margin-top: -45px
 		&>img
 			width: 100%
 			height: 100%
 			opacity: 0
-			// background: url('../img/reveiwes/foto-1.jpg') no-repeat center/cover
 
 	&__name 
 		display: block
@@ -55,7 +67,6 @@
 		font-size: 12px
 		line-height: 15px
 		color: $primary
-
 
 	&__stayed 
 		display: block
@@ -78,8 +89,12 @@
 		padding: 136px 95px 30px 99px
 		background-color: $light
 		border-radius: 8px
-
-
-			
+		@media screen and ( max-width: 992px)
+			max-width: 579px
+		@media screen and ( max-width: 768px)
+			width: 93.387%
+			padding: 136px 60px 30px 94px
+		@media screen and ( max-width: 576px)
+			padding: 136px 33px 30px 29px
 
 

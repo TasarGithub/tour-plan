@@ -173,7 +173,7 @@ $(document).ready(function () {
 
 
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container.hotel-body--swiper', {
+  var mySwiper = new Swiper ('.swiper-container.hotel-body--swiper-container', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
@@ -193,8 +193,8 @@ $(document).ready(function () {
 		}
 		
   });
-  // var next = $('.swiper-button--next');
-  // var prev = $('.swiper-button--prev');
+  var next = $('.swiper-button--next');
+  var prev = $('.swiper-button--prev');
   // //var bullets = $('.swiper-pagination');
   
   // next.css('left',prev.width() + 6 + bullets.width() + 32);
@@ -202,7 +202,7 @@ $(document).ready(function () {
 	// // bullets.css('left',prev.width() + 21);
 
   //initialize swiper when document ready
-  var mySwiperReveiwes = new Swiper ('.swiper-container.reviews--swiper', {
+  var mySwiperReveiwes = new Swiper ('.swiper-container.reviews--swiper-container', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
@@ -221,22 +221,6 @@ $(document).ready(function () {
 			prevEl: '.swiper-button-reviews--prev',
 		},
   });
-
-	// var mySwiperReveiwes = new Swiper('.swiper-container.reviews--swiper-container', {
-	// 	// Optional parameters
-	// 	loop: true,
-	
-	// 	// If we need pagination
-
-	
-	// 	// Navigation arrows
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-reviews--next',
-	// 		prevEl: '.swiper-button-reviews--prev',
-	// 	},
-	
-
-	// });
 
 
 
@@ -594,7 +578,8 @@ $(document).ready(function () {
 
 
 	// });
-
+	
+	// $('.parallax-window').parallax({imageSrc: '../img/bg-subscribe.jpg'});
 
 });
 
