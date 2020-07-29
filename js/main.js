@@ -173,7 +173,7 @@ $(document).ready(function () {
 
 
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container.hotel-body--swiper-container', {
+  var mySwiper = new Swiper ('.swiper-container.swiper-container--hotel-body', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
@@ -202,7 +202,7 @@ $(document).ready(function () {
 	// // bullets.css('left',prev.width() + 21);
 
   //initialize swiper when document ready
-  var mySwiperReveiwes = new Swiper ('.swiper-container.reviews--swiper-container', {
+  var mySwiperReveiwes = new Swiper ('.swiper-container.swiper-container--reviews', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
@@ -217,8 +217,8 @@ $(document).ready(function () {
 		// },
 
 		navigation: {
-			nextEl: '.swiper-button-reviews--next',
-			prevEl: '.swiper-button-reviews--prev',
+			nextEl: '.swiper-button--reviews-next',
+			prevEl: '.swiper-button--reviews-prev',
 		},
   });
 
