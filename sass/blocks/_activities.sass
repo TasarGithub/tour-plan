@@ -28,8 +28,11 @@
 	&__item
 		position: relative
 		display: flex
-		flex-direction: column
-		justify-content: flex-end
+		// flex-direction: column
+		// justify-content: flex-end
+		flex-wrap: wrap
+		align-items: flex-start
+		align-content: flex-end
 		width: 255px
 		min-height: 255px
 		padding: 26px 26px 24px 26px
@@ -56,8 +59,6 @@
 				margin: 0 0 20px 0
 			&:nth-child(3)
 				margin: 0 0 20px 0
-			
-				
 		&::before
 			content: ""
 			position: absolute
@@ -71,7 +72,7 @@
 
 	&__text
 		position: relative
-		flex: 0 0 auto
+		flex: 0 0 100%
 		margin: 0 0 18px 0
 		font-weight: bold
 		font-size: 16px
@@ -82,7 +83,7 @@
 	&__button
 		flex: 0 0 auto
 		position: relative
-		max-width: 100px
+		max-width: 180px
 		padding: 7px 20px
 		font-family: Nunito
 		font-weight: 600

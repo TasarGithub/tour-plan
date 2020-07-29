@@ -455,7 +455,6 @@ button:hover {
 
 .form__button {
   height: 100%;
-  width: 65px;
   border: none;
   background-color: #EC1F46;
   color: #ffffff;
@@ -496,6 +495,7 @@ button:hover {
 
 .navbar--form-button {
   padding: 10.5px 0;
+  width: 65px;
 }
 
 .navbar__user {
@@ -1084,7 +1084,8 @@ button:hover {
 
 .subscribe--button {
   height: 100%;
-  padding: 20px 0;
+  max-width: 155px;
+  padding: 20px 18px;
   border-radius: 0px 4px 4px 0px;
 }
 
@@ -1208,15 +1209,16 @@ button:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
   width: 255px;
   min-height: 255px;
   padding: 26px 26px 24px 26px;
@@ -1241,9 +1243,9 @@ button:hover {
 .activities__text {
   position: relative;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
   margin: 0 0 18px 0;
   font-weight: bold;
   font-size: 16px;
@@ -1256,7 +1258,7 @@ button:hover {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   position: relative;
-  max-width: 100px;
+  max-width: 180px;
   padding: 7px 20px;
   font-family: Nunito;
   font-weight: 600;
