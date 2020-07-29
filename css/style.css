@@ -1462,6 +1462,10 @@ button:hover {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .activities__item {
@@ -1651,27 +1655,11 @@ button:hover {
     width: 93.387%;
     padding: 136px 60px 30px 94px;
   }
-
-  .activities__container {
-    width: 95%;
-  }
 }
 
 @media screen and (max-width: 767px) {
   .activities__item {
-    width: 100%;
-  }
-
-  .activities__item:nth-child(1) {
-    margin: 0 0 20px 0;
-  }
-
-  .activities__item:nth-child(2) {
-    margin: 0 0 20px 0;
-  }
-
-  .activities__item:nth-child(3) {
-    margin: 0 0 20px 0;
+    width: 44vw;
   }
 }
 
@@ -1731,6 +1719,24 @@ button:hover {
 
   .reviews__text {
     padding: 136px 33px 30px 29px;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .activities__item {
+    width: 100%;
+  }
+
+  .activities__item:nth-child(1) {
+    margin: 0 0 20px 0;
+  }
+
+  .activities__item:nth-child(2) {
+    margin: 0 0 20px 0;
+  }
+
+  .activities__item:nth-child(3) {
+    margin: 0 0 20px 0;
   }
 }
 
@@ -1803,6 +1809,10 @@ button:hover {
 
   .reviews {
     padding: 40px 0 50px;
+  }
+
+  .activities {
+    padding: 40px 0 60px 0;
   }
 }
 
