@@ -424,9 +424,44 @@ span {
   margin: 0;
 }
 
+span,
+button,
+strong {
+  word-break: break-all;
+}
+
 button {
   outline: none;
   border: none;
+  height: 100%;
+}
+
+.form {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.form__input {
+  background-color: #F5FAFE;
+  width: 290px;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  color: inherit;
+  padding: 0 75px 0 23px;
+}
+
+.form__button {
+  height: 100%;
+  width: 65px;
+  border: none;
+  background-color: #EC1F46;
+  color: #ffffff;
 }
 
 .container {
@@ -457,8 +492,13 @@ button {
 }
 
 .navbar__form {
+  min-height: 40px;
   margin-right: auto;
   margin-left: 108px;
+}
+
+.navbar--form-button {
+  padding: 10.5px 0;
 }
 
 .navbar__user {
@@ -498,38 +538,6 @@ button {
 
 .menu-btn:hover {
   cursor: pointer;
-}
-
-.form {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  border-radius: 6px;
-  height: 40px;
-}
-
-.form__input {
-  background-color: #F5FAFE;
-  width: 350px;
-  font-size: 12px;
-  line-height: 15px;
-  border: none;
-  color: inherit;
-  padding: 0 75px 0 23px;
-}
-
-.form__button {
-  height: 100%;
-  width: 65px;
-  border: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: #EC1F46;
-  color: #ffffff;
 }
 
 .menu {
@@ -993,7 +1001,7 @@ button {
   position: relative;
   padding: 98px 0 87px;
   background: transparent;
-  min-height: 250px;
+  min-height: 260px;
 }
 
 .subscribe::before {
@@ -1024,12 +1032,13 @@ button {
 }
 
 .subscribe__text {
+  position: relative;
   color: #ffffff;
-  z-index: 10;
-  padding: 0 20px 37px 0;
+  max-width: 242px;
 }
 
 .subscribe__subtitle {
+  display: block;
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
@@ -1043,7 +1052,7 @@ button {
 }
 
 .subscribe__form {
-  height: 55px;
+  min-height: 55px;
 }
 
 .subscribe--input {
@@ -1074,6 +1083,12 @@ button {
 .subscribe--input::-moz-placeholder,
 .subscribe--input :-moz-placeholder {
   opacity: 1;
+}
+
+.subscribe--button {
+  height: 100%;
+  padding: 20px 0;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .reviews {
@@ -1498,32 +1513,7 @@ button {
   }
 
   .subscribe {
-    padding: 92px 0 93px;
-  }
-
-  .subscribe {
-    padding: 76px 20px 83px;
-  }
-
-  .subscribe__container {
-    max-width: 700px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-  }
-
-  .subscribe__form {
-    width: 100%;
-  }
-
-  .subscribe--input {
-    width: 100%;
+    padding: 92px 34px 93px;
   }
 
   .reviews {
@@ -1546,6 +1536,35 @@ button {
   }
 }
 
+@media screen and (max-width: 680px) {
+  .subscribe__container {
+    max-width: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .subscribe__text {
+    margin: 0 0 37px 0;
+  }
+
+  .subscribe__subtitle {
+    margin: 0 0 5px 0;
+  }
+
+  .subscribe__form {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .navbar__top {
     padding: 27px 0;
@@ -1561,6 +1580,14 @@ button {
 
   .hotel-body__slider {
     margin-bottom: 20px;
+  }
+
+  .subscribe {
+    padding: 76px 20px 83px;
+  }
+
+  .subscribe--input {
+    width: 100%;
   }
 
   .reviews__text {
@@ -1626,10 +1653,8 @@ button {
   }
 
   .subscribe__subtitle {
-    display: block;
     font-size: 20px;
     line-height: 25px;
-    margin: 0 0 5px 0;
   }
 
   .subscribe__title {

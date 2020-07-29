@@ -26,16 +26,47 @@ ul
 	margin: 0
 
 
-p, span
+p, span,
 	padding: 0
 	margin: 0
+
+span, button, strong
+	word-break: break-all
 
 button
 	outline: none
 	border: none
+	height: 100%
 
 
 
 
 
 .section
+
+
+.form
+	position: relative
+	display: flex
+	overflow: hidden
+	border-radius: 6px
+
+	&__input
+		background-color: $secondary
+		width: 290px
+		font-size: 12px
+		line-height: 15px
+		border: none
+		color: inherit
+		padding: 0 75px 0 23px	
+
+
+	&__button
+		height: 100%
+		width: 65px
+		border: none
+		// position: absolute
+		// right: 0
+		// top: 0
+		background-color: $primary
+		color: $light
