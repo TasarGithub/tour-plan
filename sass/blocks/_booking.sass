@@ -40,31 +40,11 @@
 		line-height: 16px
 		
 
-	&__2Guests, &__1room, &__telephone
-		display: flex
-		width: 80px
-		justify-content: space-between
-		align-items: center
-		font-size: 12px
-		line-height: 16px
-		margin-left: auto
-
-
-	&__2Guests
+	&__guests
 		margin-bottom: 8px
 		margin-top: 	6px
-		&::before
-			content: ""
-			width: 14px
-			height: 14px
-			background: url('../img/user.svg') no-repeat center/cover
-	&__1room
-		&::before
-			content: ""
-			width: 14px
-			height: 14px
-			background: url('../img/home.svg') no-repeat center/cover
-
+	
+	
 	&__call-center
 		display: flex
 		justify-content: space-between
@@ -76,6 +56,10 @@
 		line-height: 25px	
 
 	&__telephone
+		display: flex
+		width: 80px
+		justify-content: space-between
+		align-items: center
 		font-weight: 600
 		font-size: 18px
 		line-height: 25px
@@ -84,7 +68,7 @@
 		&::before
 			content: ""
 			width: 14px
-			height: 14px			
+			height: 14px
 			background: url('../img/phone-call.svg') no-repeat center/cover
 
 
@@ -101,3 +85,24 @@
 		border-radius: 4px
 		color: $light
 
+.info-room
+	display: flex
+	width: 80px
+	justify-content: space-between
+	align-items: center
+	font-size: 12px
+	line-height: 16px
+	margin-left: auto
+
+.guests
+	&::before
+		content: ""
+		width: 14px
+		height: 14px
+		background: url('../img/user.svg') no-repeat center/cover
+.room
+	&::before
+		content: ""
+		width: 14px
+		height: 14px
+		background: url('../img/home.svg') no-repeat center/cover

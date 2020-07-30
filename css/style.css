@@ -911,44 +911,9 @@ button:hover {
   line-height: 16px;
 }
 
-.booking__2Guests,
-.booking__1room,
-.booking__telephone {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 80px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 12px;
-  line-height: 16px;
-  margin-left: auto;
-}
-
-.booking__2Guests {
+.booking__guests {
   margin-bottom: 8px;
   margin-top: 6px;
-}
-
-.booking__2Guests::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  background: url("../img/user.svg") no-repeat center/cover;
-}
-
-.booking__1room::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  background: url("../img/home.svg") no-repeat center/cover;
 }
 
 .booking__call-center {
@@ -970,6 +935,19 @@ button:hover {
 }
 
 .booking__telephone {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -992,6 +970,39 @@ button:hover {
   background-color: #EC1F46;
   border-radius: 4px;
   color: #ffffff;
+}
+
+.info-room {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: auto;
+}
+
+.guests::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../img/user.svg") no-repeat center/cover;
+}
+
+.room::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../img/home.svg") no-repeat center/cover;
 }
 
 .subscribe {

@@ -9,6 +9,9 @@ const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 const tinypng = require('gulp-tinypng-compress');
 const group_media = require('gulp-group-css-media-queries');
+const fileinclude = require('gulp-file-include');
+
+
 
 
 
@@ -101,7 +104,8 @@ function minifyCss() {
 
 
 function html() {
-  src('**html')
+	src('**html')
+		.pipe(fileinclude())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
   // done();
@@ -144,7 +148,8 @@ function buildJsDone(done) {
 
 
 function htmlDone(done) {
-  src('**html')
+	src('**html')
+		.pipe(fileinclude())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
   done();
