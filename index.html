@@ -93,7 +93,7 @@
 				</div>
 				<h1 class="title hotel-name__title">Grand hilton hotel</h1>
 				
-				<span class="hotel-name__offer">Flash Offer</span>
+				<span class="flash-offer hotel-name__offer">Flash Offer</span>
 
 				<span class="hotel-name__description">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</span>
 				
@@ -170,8 +170,14 @@
 						</div>
 						<!-- /.booking__col50 -->
 						<div class="booking__col50">
-							<span class="info-room guests booking__guests">2 x Guests</span>
-							<span class="info-room room booking__room">1 x Room</span>
+							<div class="booking__info-room-wrap">
+								<img src="img/guests.svg" alt="" class="info-room-img">
+								<span class="guests">2 x Guests</span>
+							</div>
+							<div class="booking__info-room-wrap">
+								<img src="img/room.svg" alt="" class="info-room-img">
+								<span class="room">1 x Room</span>
+							</div>
 						</div>
 						<!-- /.booking__col50 -->
 					</div>
@@ -205,19 +211,90 @@
 		<h2 class="title other__title">Other Packages</h2>
 		<div class="other__grid">
 			<div class="other-big">
-				<img src="img/other/foto-1.jpg" alt="Other Packages" class="other__img-big">
-				<div class="other-big__body">
-					<div class="star other-big__star"></div>
-					<h3 class="other-title other-big__other-title">Hotel Blue Haven</h3>
-					<p class="other-big__text">Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit. Ipsum est fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute quis duis epteur excepteur ipsum occaecat eiusmod nsectetur enim laborum magna mollit. Ipsum est fugiat velit ea ullamco do</p>
-					<div class="info-room other-big__info-room">
-						<div class="info-room__adress">1749 Wheeler Ridge  Delaware</div>
+				<div class="other-big__img">
+					<div class="flash-offer other-big__flash-offer">Flash Offer</div>
+					<img src="img/other/foto-1.jpg" alt="Other Packages" class="">
+				</div>
 
+				<div class="other-body">
+					<div class="other-big__rating">
+						<img src="img/star.svg" alt="Hotel: Rating in Stars">
+						<img src="img/star.svg" alt="Hotel: Rating in Stars">
+						<img src="img/star.svg" alt="Hotel: Rating in Stars">
+						<img src="img/star.svg" alt="Hotel: Rating in Stars">
+						<img src="img/star.svg" alt="Hotel: Rating in Stars">
 					</div>
 
-				</div>
-			</div>
+					<h3 class="other__title other-big__other-title">Hotel Blue Haven</h3>
 
+					<p class="other-big__text">Aute quis duis excepteur excepteur ipsum cat eiusmod consectetur enim laborum magna llit. Ipsum est fugiat velit ea llamco do esse ut in veniam sun in onsequat. Aute quis duis epteur excepteur ipsum occaecat eiusmod nsectetur enim laborum magna mollit. Ipsum est fugiat velit ea ullamco do</p>
+
+					<div class="other__info-room">
+						<div class="other__info-room-wrap-other">
+							<img src="img/adress.svg" alt="" class="info-room-img">
+							<span class="adress other__adress">1749 Wheeler Ridge  Delaware</span>
+						</div>
+						<div class="other__info-room-wrap-other">
+							<img src="img/guests.svg" alt="" class="info-room-img">
+							<span class="guests other__guests">2 x Guests</span>
+						</div>
+						<div class="other__info-room-wrap-other">
+							<img src="img/room.svg" alt="" class="info-room-img">
+							<span class="room other__room">1 x Room</span>
+						</div>
+						
+
+					</div>
+					<div class="other__price-wrap">
+						<div class="other__price">
+							<span class="other__old-price">$ 10,500</span>
+							<span class="other__price-sum">$ 8,500</span>
+						</div>
+						<!-- /. other__price -->
+						<botton class="button-book other__booking">Book Now</botton>
+					</div>
+				</div>
+				<!-- /. info-room other-big__info-room -->
+
+			</div>
+			<!--/. other-big -->
+
+			<div class="other-item">
+				<div class="other-item__img">
+					<div class="flash-offer other-item__flash-offer">Flash Offer</div>
+					<img src="img/other/foto-2.jpg" alt="Other Packages" class="">
+				</div>
+
+				<div class="other-body other-item__other-body">
+					<h3 class="other-title other-item__other-title">LUX* Belle Mare</h3>
+
+					<div class="other__info-room">
+						<div class="other__info-room-wrap-other">
+							<img src="img/adress.svg" alt="" class="info-room-img">
+							<span class="adress other__adress">1749 Wheeler Ridge  Delaware</span>
+						</div>
+						<div class="other__info-room-wrap-other">
+							<img src="img/guests.svg" alt="" class="info-room-img">
+							<span class="guests other__guests">2 x Guests</span>
+						</div>
+						<div class="other__info-room-wrap-other">
+							<img src="img/room.svg" alt="" class="info-room-img">
+							<span class="room other__room">1 x Room</span>
+						</div>
+					</div>
+					<div class="other__price-wrap">
+						<div class="other__price">
+							<span class="other__old-price">$ 10,500</span>
+							<span class="other__price-sum">$ 8,500</span>
+						</div>
+						<!-- /. other__price -->
+						<botton class="button-book other__booking">Book Now</botton>
+					</div>
+				</div>
+				<!-- /. info-room other-big__info-room -->
+
+			</div>			
+			<!--/. other-item -->
 		</div>
 		<!-- /.other-grid -->
 	</div>
@@ -403,22 +480,22 @@
 			<div class="activities__item" style="background-image: url('img/activities/foto-1.jpg');">
 				<span class="activities__text">The curious corner <br>
 					of&nbsp;chamarel</span>
-				<button class="activities__button">Book Now</button>
+				<button class="button-book activities__button-book">Book Now</button>
 			</div>
 			<div class="activities__item" style="background-image: url('img/activities/foto-2.jpg');">
 				<span class="activities__text">Gymkhana club golf <br>
 					course</span>
-				<button class="activities__button">Book Now</button>
+				<button class="button-book activities__button-book">Book Now</button>
 			</div>
 			<div class="activities__item" style="background-image: url('img/activities/foto-3.jpg');">
 				<span class="activities__text">TTamarind falls hiking
 					<br>trip - full day</span>
-				<button class="activities__button">Book Now</button>
+				<button class="button-book activities__button-book">Book Now</button>
 			</div>
 			<div class="activities__item" style="background-image: url('img/activities/foto-4.jpg');">
 				<span class="activities__text">The blue marine discovery <br>
 					quest</span>
-				<button class="activities__button">Book Now</button>
+				<button class="button-book activities__button-book">Book Now</button>
 			</div>
 		</div>
 		<!-- /.activities__block -->
