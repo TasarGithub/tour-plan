@@ -470,7 +470,7 @@ button:hover {
   padding: 7px 20px;
   font-family: Nunito;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   border-radius: 4px;
   background-color: #EC1F46;
@@ -482,6 +482,22 @@ button:hover {
 .adress {
   font-size: 12px;
   line-height: 16px;
+}
+
+.flash-offer {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  padding: 4px 9px 4px 9px;
+  max-width: 60px;
+  min-height: 18px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  border-radius: 0 4px 4px 0;
+  color: #ffffff;
+  background-color: #EC1F46;
+  text-align: center;
 }
 
 .container {
@@ -1275,15 +1291,38 @@ button:hover {
   line-height: 20px;
 }
 
+.other {
+  padding: 40px 0 70px 0;
+}
+
+.other__main-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 65px 0;
+}
+
 .other__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
 }
 
+.other__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 500px);
+  row-gap: 30px;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+
 .other-body {
   width: 364px;
-  padding: 46px 21px 30px 44px;
+  padding: 41px 21px 30px 44px;
   background-color: #0A223D;
   color: #ffffff;
   border-radius: 0 8px 8px 0;
@@ -1291,11 +1330,26 @@ button:hover {
 }
 
 .other-big {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   height: 500px;
+}
+
+.other-big__info-room {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 0 26px 4px;
 }
 
 .other-big__other-title {
@@ -1314,6 +1368,9 @@ button:hover {
 }
 
 .other-big__flash-offer {
+  position: absolute;
+  left: 0;
+  top: 26px;
   padding: 8px 11px 7px 10px;
   max-width: 90px;
   min-height: 30px;
@@ -1323,7 +1380,7 @@ button:hover {
 
 .other-big__body {
   width: 364px;
-  padding: 46px 21px 30px 44px;
+  padding: 41px 21px 30px 44px;
   background-color: #0A223D;
   color: #ffffff;
   border-radius: 0 8px 8px 0;
@@ -1331,11 +1388,11 @@ button:hover {
 }
 
 .other-big__rating {
-  margin: 0 0 5px 0;
+  margin: 0 0 1px 0;
 }
 
 .other-big__text {
-  margin: 0 0 34px 0;
+  margin: 0 0 44px 0;
   font-size: 14px;
   line-height: 160.6%;
 }
@@ -1354,12 +1411,13 @@ button:hover {
 
 .other-item__other-body {
   width: 350px;
-  border-radius: 0;
-  padding: 30px 21px 25px 32px;
+  border-radius: 0 0 8px 8px;
+  padding: 33px 21px 27px 32px;
 }
 
 .other-item__other-title {
-  margin: 0 0 23px 0;
+  margin: 0 0 25px 0;
+  letter-spacing: 1px;
 }
 
 .other__info-room {
@@ -1372,13 +1430,31 @@ button:hover {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 0 37px;
+  margin: 0 0 14px 0;
 }
 
-.other__adress,
-.other__guests,
+.other__info-room-wrap-other {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0 11px 0;
+}
+
+.other__info-room-wrap-other::nth-child(2) {
+  margin: 0 0 8px 0;
+}
+
+.other__info-room-img {
+  margin: 0 12px 0 0;
+}
+
 .other__room {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 2px;
 }
 
 .other__price-wrap {
@@ -1396,16 +1472,21 @@ button:hover {
   align-items: flex-end;
 }
 
+.other__price {
+  margin: 0 0 3px 0;
+}
+
 .other__price > span {
   display: block;
 }
 
 .other__old-price {
+  margin: 0 0 5px 0;
   font-size: 14px;
   line-height: 18px;
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
-  margin: 0 0 5px 0;
+  letter-spacing: 0;
 }
 
 .other__price-sum {
@@ -1414,24 +1495,8 @@ button:hover {
   line-height: 30px;
 }
 
-.other__booking {
-  padding: 11px 27px 10px 26px;
-}
-
-.flash-offer {
-  position: absolute;
-  left: 0;
-  top: 26px;
-  padding: 4px 9px 4px 9px;
-  max-width: 60px;
-  min-height: 18px;
-  font-weight: 600;
-  font-size: 8px;
-  line-height: 10px;
-  border-radius: 0 4px 4px 0;
-  color: #ffffff;
-  background-color: #EC1F46;
-  text-align: center;
+.other__button-book {
+  padding: 13px 27px 12px 27px;
 }
 
 .modal,
