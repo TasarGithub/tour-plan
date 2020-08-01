@@ -1555,7 +1555,7 @@ button:hover {
 .footer__info {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 40px;
+  grid-template-rows: 1fr 40px 89px;
 }
 
 .list__link {
