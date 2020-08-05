@@ -41,11 +41,13 @@
 		width: 65px
 
 
-	&__user
+	&-user
 		display: flex
 		justify-content: space-between
 		align-items: center
 		max-width: 107px
+		text-decoration: none
+		color: $text-color
 		@media screen and ( max-width: 768px)
 			display: none
 
@@ -123,7 +125,7 @@
 	text-decoration: none
 	color: inherit
 
-.user__avatar
+.user-avatar
 	border-radius: 50%
 	
 	height: 40px 
@@ -131,7 +133,7 @@
 	object-fit: cover
 	background: url('../img/user-avatar.jpg') no-repeat center/cover;
 
-.user__name
+.form-user__name
 	margin-left: 18px
 
 
