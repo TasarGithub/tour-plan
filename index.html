@@ -14,31 +14,35 @@
 	
   <title>Best Tour Plan - Hotel Booking</title>
 </head>
-<body>
+<body >
 
-  <header class="navbar navbar__wrap">
+  <header class="navbar navbar--mobile-fixed">
     <div class="container navbar__container">
 			<div class="navbar__top">
 				<a href="" class="logo navbar__logo"><img src="img/horizontal-logo.svg" alt="Logo: Best Tour plan" class="logo__img"></a>
 
-				<form action="#" class="form form__navbar">
-					<input type="text" class="form-input form-input__navbar" placeholder="Search Location">
-					<button class="form-button form-button__navbar">
+				<form action="#" class="form form__search mobile-block--invisible">
+					<input type="text" class="form-input form-input__search" placeholder="Search Location">
+					<button class="form-button form-button__search">
 						<img src="img/search.svg" alt="Icon: search">
 					</button>
 				</form>
 
-				<a href="#" class="form-user navbar__user">
+				<a href="#" class="user mobile-flex--invisible">
 					<!-- <img src="img/user-avatar.jpg" alt="Avatar: Natan" class="user__avatar"> -->
-					<div class="user-avatar"></div>
-					<span class="form-user__name">Natan</span>
+					<div class="user__avatar"></div>
+					<span class="user__name">Natan</span>
 				</a>
 
-					<button class="menu-btn navbar__menu-btn">
+					<!-- <button class="menu-btn navbar__menu-btn">
 						<span class="menu-btn__line"></span>
 						<span class="menu-btn__line"></span>
 						<span class="menu-btn__line"></span>
-					</button>
+					</button> -->
+					<div class="navbar__burger">
+						<span></span>
+					</div>
+
 			</div>
 			<!-- /.navbar__top -->
     </div>
@@ -46,6 +50,21 @@
 		<nav class="navbar__bottom">
 			<div class="container">
 				<ul class="menu ">
+					<li class="menu__item  mobile-block--visible">
+						<a href="#" class="user mobile-block--visible">
+							<!-- <img src="img/user-avatar.jpg" alt="Avatar: Natan" class="user__avatar"> -->
+							<div class="user__avatar"></div>
+							<span class="user__name">Natan</span>
+						</a>
+					</li>
+					<li class="menu__item  mobile-block--visible">
+						<form action="#" class="form form__search mobile-block--visible">
+							<input type="text" class="form-input form-input__search" placeholder="Search Location">
+							<button class="form-button form-button__search">
+								<img src="img/search.svg" alt="Icon: search">
+							</button>
+						</form>
+					</li>
 					<li class="menu__item"><a href="#" class="menu__link">All Deals</a></li>
 					<li class="menu__item"><a href="#" class="menu__link">Hotels</a></li>
 					<li class="menu__item"><a href="#" class="menu__link">Activities</a></li>
@@ -438,10 +457,16 @@
 		</h2>
 		<!-- /.subscribe__text -->
 		<form action="send" class="form form__subscribe">
-			<input type="text" class="form-input form-input__subscribe" placeholder="Your email address">
-				<button class="button form-button form-button__subscribe">
-						Send
-				</button>
+			<input 
+			type="text" 
+			class="form-input form-input__subscribe" 
+			placeholder="Your email address"
+			name="emailforsubscribe"
+			>
+			
+			<button class="button form-button form-button__subscribe">
+					Send
+			</button>
 		</form>
 		<!-- /.subscribe__form -->
 	</div>

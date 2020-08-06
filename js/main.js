@@ -580,6 +580,14 @@ $(document).ready(function () {
 	// });
 	
 	// $('.parallax-window').parallax({imageSrc: '../img/bg-subscribe.jpg'});
+	// Бургер клик
+	$('.navbar__burger').click(function (e) {
+		// $('.user, .form__search').toggleClass('mobile-block--visible');
+		$('.navbar__bottom').toggleClass('navbar__bottom--mobile-menu');
+		$('.navbar__burger').toggleClass('active');
+		$('body').toggleClass('body__lock');
+	});
+
 
 });
 

@@ -1,8 +1,15 @@
 .navbar
 	//background: linear-gradient(to top, $dark 40%, transparent 0%)
-	// background-color: #fff
+	background-color: #fff
 	// &__wrap
 	// 	margin: 0 0 18px 0
+	&--mobile-fixed
+		@media screen and ( max-width: 768px)
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 99
 
 
 	&__top
@@ -21,42 +28,107 @@
 		display: block
 		max-height: 24px
 
+	&__bottom
+		background-color: $dark
+		@media screen and ( max-width: 768px)
+			// display: none
+			position: fixed
+			//top: 78px
+			top: -100%
+			right: 0
+			left: 0
+			bottom: 0
+			z-index: 40
+			padding: 31px 0 48px 0
+			height: 100vh
+			overflow: auto
+			transition: all 0.3s ease 0s
+		&--mobile-menu
+			@media screen and ( max-width: 768px)
+				// display: block
+				top: 78px
+
+
+
 
 .form
-	&__navbar
-		min-height: 40px
+	&__search
+		display: block
+		height: 40px
 		margin-right: auto
 		margin-left: 108px
 		@media screen and ( max-width: 992px)
 			margin-left: auto
-			height: 30px
+			min-height: 30px
 		@media screen and ( max-width: 768px)
+			width: 245px
+			min-height: 40px
+			margin: 0 auto 19px
 			display: none
-	&-input__navbar
+	&-input__search
+		height: 100%
+		background-color: $secondary
+		width: 350px
 		@media screen and ( max-width: 992px)
 			width: 340px
+		@media screen and ( max-width: 768px)
+			width: 180px
 
-	&-button__navbar
+	&-button__search
 		padding: 10.5px 0
 		width: 65px
+		position: absolute
+		right: 0
+		top: 0
 
 
-	&-user
-		display: flex
-		justify-content: space-between
-		align-items: center
-		max-width: 107px
-		text-decoration: none
-		color: $text-color
-		@media screen and ( max-width: 768px)
-			display: none
+
+.navbar__burger
+	display: none
+	// visibility: hidden
+	// opacity: 0
+	position: relative
+	width: 16px
+	height: 11px
+	@media screen and ( max-width: 768px)
+		display: block
+	&::after,&::before
+		content: ''
+		background-color: $text-color
+		position: absolute
+		width: 100%
+		height: 1px
+		left: 0
+		top: 0
+		transition: all 0.3s ease 0s
+	&::after 
+		top: 8px
+	&>span
+		position: absolute
+		background-color: $text-color
+		left: 0
+		top: 4px
+		width: 100%
+		height: 1px
+		transition: all 0.3s ease 0s
+
+.navbar__burger.active
+	&>span
+		opacity: 0
+	&::before
+		transform: rotate(45deg)
+		top: 4px
+	&::after
+		transform: rotate(-45deg)
+		top: 4px
+		// bottom: 2px
+		
+		
+
+		
 
 
-	&__bottom
-		background-color: $dark
-		// max-height: 80px
-		// @media screen and ( max-width: 992px)
-		// 	max-height: 60px
+
 
 
 .menu-btn
@@ -79,11 +151,6 @@
 		cursor: pointer
 
 
-
-		
-
-
-
 .menu
 	width: 100%
 	padding: 30.5px 0
@@ -93,10 +160,14 @@
 	@media screen and ( max-width: 992px)
 		padding: 22px 0
 	@media screen and ( max-width: 768px)
-		display: none
 
+		flex-direction: column
+		// align-items: center
+		justify-content: center
+	&__item
+		@media screen and ( max-width: 768px)
+			margin: 0 0 20px 0
 
-.menu__item 
 
 .menu__link
 	font-weight: Bold
@@ -109,8 +180,6 @@
 		line-height: 15px
 
 
-
-
 .logo
 	width: 177px // если поставить др картинку, надо чтобы сохранилась размер занимаемого места. Можно не max-width, тк контроль будет на адаптиве в медиазапросах
 	@media screen and ( max-width: 992px)
@@ -119,24 +188,49 @@
 		width: 99px
 
 
-.logo__img 
-
 .user
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 107px
 	text-decoration: none
-	color: inherit
+	color: $text-color
+	@media screen and ( max-width: 768px)
+		display: none
 
-.user-avatar
-	border-radius: 50%
-	
-	height: 40px 
-	width: 40px
-	object-fit: cover
-	background: url('../img/user-avatar.jpg') no-repeat center/cover;
+	&__avatar
+		border-radius: 50%
+		height: 40px 
+		width: 40px
+		object-fit: cover
+		background: url('../img/user-avatar.jpg') no-repeat center/cover;
+		@media screen and ( max-width: 768px)
+			text-align: center
+			margin: 0 auto 10px
+	&__name
+		margin-left: 18px
+		@media screen and ( max-width: 786px)
+			margin: 0 0 7px 0
+			display: inline-block
+			color: $light
 
-.form-user__name
-	margin-left: 18px
 
+.mobile-block--invisible
+	display: block
+	@media screen and ( max-width: 768px)
+		display: none
 
+.mobile-block--visible
+	display: none
+	@media screen and ( max-width: 768px)
+		display: block
 
+.mobile-flex--invisible
+	display: flex
+	@media screen and ( max-width: 768px)
+		display: none
 
-
+.mobile-flex--visible
+	display: none
+	@media screen and ( max-width: 768px)
+		display: flex
