@@ -159,27 +159,10 @@
 	&__form-title
 		margin: 0 0 34px 0 
 		@media screen and ( max-width: 576px)	
-
 			flex-basis: 100%
 	&__input
 		padding-top: 0.3rem
-		&-group
-			display: flex
-			flex-direction: column
-			flex-basis: 45%
-			margin-bottom: 3.2rem
-			&--full-width
-				flex-basis: 100%
-				margin-bottom: 2rem
 
-	&-logo__img
-
-	&__list-wrap
-
-
-
-	
-	&-title 	
 
 .list 
 	&__link
@@ -266,62 +249,33 @@
 	
 
 
-.footer__input
-	color: $text-color
-	margin: 0 0 15px 0
-	@media screen and ( max-width: 576px)
-		
-		width: 100%
-	&::placeholder
-		color: $text-light
-	&::-moz-placeholder, :-moz-placeholder
-		opacity: 1
-
-	&-message
-		height: 123px	
-		padding: 18px 0 0 23px	
-		border-radius: 4px	
+.footer
+	&__message
+		padding: 18px 10px 0 23px	
 		margin: 0 0 22px 0
-		resize: none
-		outline: none	
-		overflow: auto
-		-moz-appearance: none	
-		width: 100%
-		&:placeholder
-			color: $text-light
-		&::-moz-placeholder, :-moz-placeholder
-			opacity: 1
 		@media screen and ( max-width: 576px)
 			margin: 0 0 15px 0
-	&-phone
-		width: 254px	
-		height: 50px
-		border-radius: 4px	
-	&-name
-		width: 254px	
-		height: 50px	
-		border-radius: 4px
-	&-requred
-		align-self: center
-		margin: 0  0 0
-		font-weight: bold	
-		font-size: 12px	
-		line-height: 15px	
+	&__input
+		color: $text-color
+		margin: 0 0 15px 0
 		@media screen and ( max-width: 576px)
-			flex-basis: 100%
-			margin: 0 0 15px 0
+			width: 100%
 
-			
+		&-phone
+			width: 254px	
+			height: 50px
+			border-radius: 4px	
+		&-name
+			width: 254px	
+			height: 50px	
+			border-radius: 4px
+
+
+
 
 
 .footer__button
-	padding: 18px 65px
-	background-color: $primary
-	font-weight: bold
-	font-size: 12px
-	line-height: 15px
 	border-radius: 4px
-	color: $light
 	@media screen and ( max-width: 576px)
 		order: 4
 

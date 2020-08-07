@@ -146,10 +146,10 @@ $(document).ready(function () {
   // Валидация форм
   //, .footer__form, .control__form
 
-  //Замена встроенного метода проверки емейла на лучший , с проверкой точки
-  // $.validator.methods.email = function( value, element ) {
-  //   return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
-  // };
+  //Замена встроенного метода проверки емейла на лучший , с проверкой точки - это замена из начинки плагина validator
+  $.validator.methods.email = function( value, element ) {
+    return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
+  };
 
   // $('#modal__form').validate({
   //   errorClass: "invalid",

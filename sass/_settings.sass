@@ -50,31 +50,71 @@ button
 
 .section
 
+.form--radius
+	overflow: hidden
+	border-radius: 6px
 
 .form
 	position: relative
 	display: flex
-	overflow: hidden
-	border-radius: 6px
+	// overflow: hidden
+	// border-radius: 6px
 
 	&-input
 		background-color: $secondary
-		width: 290px
+		// width: 290px
 		font-size: 12px
 		line-height: 15px
 		border: none
-		color: inherit
-		padding: 0 75px 0 23px	
-
+		color: $text-color
+		padding: 0 15px 0 23px
+		&::placeholder
+			color: $text-light
+		&::-moz-placeholder, :-moz-placeholder
+			opacity: 1
+		&--290
+			width: 290px
 
 	&-button
 		height: 100%
 		border: none
-		// position: absolute
-		// right: 0
-		// top: 0
+		padding: 18px 65px
 		background-color: $primary
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
 		color: $light
+
+		
+
+	&-message
+		height: 123px	
+		padding: 18px 18px 0 23px	
+		border-radius: 4px	
+		resize: none
+		outline: none	
+		overflow: auto
+		-moz-appearance: none	
+		width: 100%
+		font-size: 12px
+		line-height: 15px
+		color: $text-color
+
+		//background-color: $light
+		&::placeholder
+			color: $text-light
+		&::-moz-placeholder, :-moz-placeholder
+			opacity: 1
+	&-requred
+		font-weight: bold	
+		font-size: 12px	
+		line-height: 15px
+		align-self: center
+	&-bottom-wrap
+		display: flex
+		justify-content: space-between
+		width: 100%
+
 
 .button-book
 	flex: 0 0 auto
@@ -110,3 +150,18 @@ button
 	color: $light
 	background-color: $primary
 	text-align: center
+
+
+.back
+	display: block
+	text-decoration: none 
+	color: $text-color
+	margin-top: 30px
+.back-wrap
+	display: flex
+	align-items: center
+.back__text
+	margin: 0 0 0 10px
+
+
+

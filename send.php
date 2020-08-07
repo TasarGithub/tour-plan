@@ -1,16 +1,16 @@
 <?php
 
-// $mail->CharSet = "UTF-8";
+$mail->CharSet = "UTF-8";
 
-if ($_POST['emailforsubscribe']<>''){
+if ($_POST['userEmailSubscribe']<>''){
     // $userName = $_POST['userName'];
-    $userEmail = $_POST['emailForSubscribe'];
+    $userEmail = $_POST['userEmailSubscribe'];
 		// $userPhone = $_POST['userPhone'];
 		//Формирование письма
 		$title = "Новый e-mail для подписки на новости";
 		$body = "
 		<h2> Новый e-mail для подписки на новости </h2>
-		<b>Почта:</b> $userEmail<br>
+		<b>Почта:</b> $userEmailSubscribe<br>
 		<b></b> <br>
 		<b></b> <br>
 		";
@@ -19,25 +19,41 @@ if ($_POST['emailforsubscribe']<>''){
 if ($_POST['userNameFooter']<>''){
     $userName = $_POST['userNameFooter'];
 		$userPhone = $_POST['userPhoneFooter'];
-		$userMessage = $_POST['userMessage'];
+		$userMessage = $_POST['userMessageFooter'];
 	 // echo $userName;
 		//Формирование письма
-		$title = "Новый обращение Best Tour Plan";
+		$title = "Новое обращение Best Tour Plan";
 		$body = "
 		<h2> Новое обращение </h2>
-		<b></b> $name <br>
-		<b> Почта: </b> $userEmail <br>
-		<b> Сообщение:</b><br> $userMessage
-		";
+		<b></b> $userNameFooter <br>
+		<b> Телефон: </b>  $userPhone <br>
+		<b> Сообщение:</b><br> $userMessageFooter";
 
 }
 
+if ($_POST['userNameModal']<>''){
+	$userName = $_POST['userNameModal'];
+	$userPhone = $_POST['userPhoneModal'];
+	$userMessage = $_POST['userMessageModal'];
+ // echo $userName;
+	//Формирование письма
+	$title = "Can I View Other Options?";
+	$body = "
+	<h2> Новое обращение </h2>
+	<b></b> $userName <br>
+	<b> Телефон: </b>  $userPhone <br>
+	<b> Сообщение:</b><br> $userMessageModal";
 
+}
 
-echo "userName", $_POST['userName'];
-// echo "userNameMetering", $_POST['userNameMetering'];
-// echo $_POST['userNameControl'];
-// echo $_POST['userNameFuter'];
+// $userName = $_POST['userNameFooter'];
+
+// echo $_POST['userNameFooter'];  //$_POST['userNameFooter'];
+// // echo "userNameMetering", $_POST['userNameMetering'];
+// // echo $_POST['userNameControl'];
+// // echo $_POST['userNameFuter'];
+// echo $body;
+// echo $title;
 
 
 // Load Composer's autoloader
@@ -50,49 +66,55 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Instantiation and passing `true` enables exceptions
+
 $mail = new PHPMailer();
 
+
 try {
-		//Server settings
-		$mail->isSMTP();                                            // Send using SMTP
+
+		$mail->isSMTP();
 		$mail->CharSet = "UTF-8";
-		$mail->SMTPAuth   = true;                                   // Enable SMTP 
-		$mail->SMTPDebug = 2;                      // Enable verbose debug output
-		$mail->Debugoutput = function($str, $level) {GLOBALS['status'][]= $str;};
+		$mail->SMTPAuth   = true;
+		// $mail->SMTPDebug = 2;
+		// $mail->Debugoutput = function($str, $level) {GLOBALS['status'][]= $str;};
 
 		// Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
-authentication
-    $mail->Username   = 'vshtrs@gmail.com';                     // SMTP username
-    $mail->Password   = '$rfv%tgb^yhn';                               // SMTP password
-    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->Username   = 'vshtrs@gmail.com';
+    $mail->Password   = '$rfv%tgb^yhn';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port       = 465;
 
     //Recipients
     $mail->setFrom('vshtrs@gmail.com', 'Тарас отправитель');
-		$mail->addAddress('tasar-ya@yandex.ru', 'Тарас получатель');     // Add a recipient
-		$mail->addAddress('tasar-ya@yandex.ru', 'Тарас получатель');     // Add a second recipient
+		$mail->addAddress('tasar-ya@yandex.ru', 'Тарас получатель');
+		// $mail->addAddress('tasar-ya@yandex.ru', 'Тарас получатель');
 
 
     // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(true);
     $mail->Subject = $title;
-    $mail->Body    = $body;
+    $mail->Body = $body;
 		//${userName} ${userNameFooter} ${userNameFoursteps} ${userNameControl}
 		
     if ($mail->send()) { $result = "success";
-      echo "ok nnnnnnnn";
-    } else { $result = "error";
+			// echo "ok nnnnnnnn";
+			// echo $body;
+			// echo $title;
+			header('Location: thanks.html');
+		} else { $result = "error";
+			echo $body;
         echo "Не отправлено. Код ошибки: {$mail->ErrorInfo}";
-     }
+		}
 
-    //  $mail->send();
-    //  header('Location: thanks.html');
+
 } catch (Exception $e) {
     echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
 }
 
 // Отображение результата
 
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+// echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+	//header('Location: thankyou.html');
 
+?>

@@ -21,8 +21,8 @@
 			<div class="navbar__top">
 				<a href="" class="logo navbar__logo"><img src="img/horizontal-logo.svg" alt="Logo: Best Tour plan" class="logo__img"></a>
 
-				<form action="#" class="form form__search mobile-block--invisible">
-					<input type="text" class="form-input form-input__search" placeholder="Search Location">
+				<form action="#" class="form form__search form--radius mobile-block--invisible">
+					<input type="text" class="form-input form-input__search form-input--290" placeholder="Search Location">
 					<button class="form-button form-button__search">
 						<img src="img/search.svg" alt="Icon: search">
 					</button>
@@ -58,8 +58,8 @@
 						</a>
 					</li>
 					<li class="menu__item  mobile-block--visible">
-						<form action="#" class="form form__search mobile-block--visible">
-							<input type="text" class="form-input form-input__search" placeholder="Search Location">
+						<form action="#" class="form form__search form--radius mobile-block--visible">
+							<input type="text" class="form-input form-input__search form-input--290" placeholder="Search Location">
 							<button class="form-button form-button__search">
 								<img src="img/search.svg" alt="Icon: search">
 							</button>
@@ -207,7 +207,7 @@
 					</div>
 					<!-- /.booking__call-center-->
 
-					<button class="booking__btn-order">View&nbsp;Other&nbsp;Options</button>
+					<button data-toggle="modal" class="booking__btn-order">View&nbsp;Other&nbsp;Options</button>
 				</div>
 				<!-- /.booking__booking -->
 				<div class="map" id="map">
@@ -456,15 +456,15 @@
 			<strong class="title subscribe__title">Newsletter</strong>
 		</h2>
 		<!-- /.subscribe__text -->
-		<form action="send" class="form form__subscribe">
+		<form action="send.php" method="POST" class="form form__subscribe form--radius">
 			<input 
-			type="text" 
-			class="form-input form-input__subscribe" 
+			type="mail" 
+			class="form-input form-input--290 form-input__subscribe" 
 			placeholder="Your email address"
-			name="emailForSubscribe"
+			name="userEmailSubscribe"
 			>
 			
-			<button class="button form-button form-button__subscribe">
+			<button class="button form-button form-button__subscribe" type="submit">
 					Send
 			</button>
 		</form>
@@ -704,8 +704,6 @@
 			<!-- /.socialnet footer__socilalnet -->
 
 
-
-
 			<div class="contacts footer__contacts">
 
 				<h3 class="footer-title contacts__footer-title">Contact Details</h3>
@@ -723,9 +721,9 @@
 						<div class="contacts__item-wrap">
 							<img src="img/icon-phone.svg" alt="Phones" class="contacts__icon">
 							<ul class="contacts__list-tel">
-								<li class="contacts__tel"><a href="tel">Tel (business hours) : 269 1500</a></li>
-								<li class="contacts__tel"><a href="tel">Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a></li>
-								<li class="contacts__tel"><a href="tel">Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a></li>
+								<li class="contacts__tel"><a href="tel:2691500">Tel (business hours) : 269 1500</a></li>
+								<li class="contacts__tel"><a href="tel:52566138">Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)</a></li>
+								<li class="contacts__tel"><a href="tel:52566138">Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a></li>
 							</ul>
 						</div>
 					</li>
@@ -733,7 +731,7 @@
 					<li class="contacts__list-item">
 						<div class="contacts__item-wrap">
 							<img src="img/icon-mail.svg" alt="E-Mail" class="contacts__icon">
-							<a href="mail" class="contacts__mail">cherly.lawson@example.com</a>
+							<a href="mailto:cherly.lawson@example.com" class="contacts__mail">cherly.lawson@example.com</a>
 						</div>
 					</li>
 					<!-- /.contacts__list-item -->
@@ -748,38 +746,36 @@
 			<!-- /.contacts footer__contacts -->
 			<div class="footer__form-wrap">
 				<h3 class="footer-title footer__form-title">Send us a message </h3>
-				<form action="send.php" class="form footer__form">
+				<form action="send.php" method="POST" class="form footer__form">
 						<input 
 							type="text"
 							class="form-input footer__input-name footer__input" id="user-name-footer" 
 							placeholder="Your Full Name*"
 							name="userNameFooter" 
 							>
-					<!-- /.footer__input-group -->
+
 
 						<input 
 							type="tel" 
 							name="userPhoneFooter" 
-							class="form-input footer__input footer__input-phone" id="user-phone-footer" 
+							class="form-input footer__input footer__input-phone" 
+							id="user-phone-footer" 
 							placeholder="Phone Number*"
 							>
 
-					<!-- /.footer__input-group -->
-						<!-- <textarea name="userQuestion" class="form-input footer__input-message" id="user-question" placeholder="Message" cols="30" rows="5"> 
-						</textarea>           -->
 						<textarea 
-							name="userMessage" 
-							id="user-question"  
+							name="userMessageFooter" 
+							id="user-message-footer"  
 							placeholder="Message" 
-							class="form-input footer__input-message footer__input">
-						</textarea>
+							class="form-message  footer__message footer__input"></textarea>
 
-					<!-- /.footer__input-group -->                    
-					<!-- <textarea  id="" cols="30" rows="10"> -->
-					<button class="button footer__button button--form">
-						Send
-					</button>
-					<span class="footer__input-requred">* Required Fields</span>
+						<div class="form-bottom-wrap">
+							<button class="button footer__button form-button" type="submit">
+								Send
+							</button>
+							<span class="form-requred footer__input-requred">* Required Fields</span>
+						</div>
+						<!-- /.form-bottom-wrap -->
 				</form>
 			</div>
 			<!-- /.form footer__form -->
@@ -804,6 +800,62 @@
 	<!-- /.container footer__container -->
 </footer>
 <!-- /.footer -->
+
+<div class="modal " data-close="modal">
+	<div class="modal__overlay">
+
+	</div>
+	
+	<!-- /.modal__overlay -->
+	<div class="modal__dialog">
+		<!-- <button class="modal__close"></button> -->
+		<a href="#" class="modal__close"><img src="img/close.svg" alt="icon: close"></a>
+		
+		<h3 class="modal__title modal__title">Booking </h3>
+		<form action="send.php" method="POST" class="form modal__form">
+			<input 
+				type="text"
+				class="form-input modal__input-name modal__input" id="user-name-modal" 
+				placeholder="Your Full Name*"
+				name="userNameModal" 
+				>
+			<input 
+					type="tel" 
+					name="userPhoneModal" 
+					class="form-input modal__input modal__input-phone" id="user-phone-modal" 
+					placeholder="Phone Number*"
+				>
+				<input 
+					type="mail" 
+					name="userEmailModal" 
+					class="form-input modal__input modal__input-phone" id="user-email-modal" 
+					placeholder="Email*"
+				>
+			<textarea 
+				name="userMessageModal" 
+				id="user-message-modal"  
+				placeholder="Message" 
+				class="form-message modal__message"></textarea>
+
+			<div class="form-bottom-wrap">
+				<button class="button modal__button form-button button--form" type="submit">
+					Send
+				</button>
+				<span class="form-requred modal__form-requred">* Required Fields</span>
+			</div>
+			<!-- /.modal__bottom -->
+
+	</form>
+		<!-- /.form modal__form -->
+		<div class="modal__thanks-block">
+			<h3 class="modal-thanks__title">Спасибо за заявку </h3>
+			<p class="modal-thanks__text">Наш менеджер перезвонит вам в течении 15 минут</p>
+		</div>
+		<!-- /.modal__thanks-block -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
 
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
