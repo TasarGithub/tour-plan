@@ -1971,7 +1971,8 @@ button:hover {
   border-radius: 8px;
   color: #ffffff;
   z-index: 101;
-  width: 478px;
+  max-width: 478px;
+  width: 100%;
   -webkit-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
 }
@@ -2614,6 +2615,10 @@ button:hover {
 
   .footer-bottom__text {
     margin: 0 0 10px 0;
+  }
+
+  .modal__dialog {
+    padding: 33px 5vw;
   }
 }
 

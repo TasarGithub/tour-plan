@@ -24,10 +24,13 @@
 		border-radius: 8px
 		color: $light
 		z-index: 101
-		width: 478px
+		max-width: 478px
+		width: 100%
 		transform: translate(-50%, 50%)
 		@media screen and ( max-height: 490px)
 			padding: 14px 88px
+		@media screen and ( max-width: 576px)
+			padding: 33px 5vw
 	&__close
 		position: absolute
 		right: 18px
