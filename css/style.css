@@ -1981,7 +1981,6 @@ div[id$='-error'] {
   width: 100%;
   -webkit-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
-  overflow-y: scroll;
 }
 
 .modal__close {
@@ -2821,10 +2820,12 @@ div[id$='-error'] {
 @media screen and (max-height: 490px) {
   .modal__dialog {
     padding: 14px 88px;
+    max-height: 80%;
+    overflow-y: auto;
   }
 
   .modal__input {
-    min-height: 30px;
+    min-height: 40px;
   }
 
   .modal__input-group {
