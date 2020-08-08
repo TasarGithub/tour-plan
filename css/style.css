@@ -2457,6 +2457,7 @@ div[id$='-error'] {
   }
 
   .reviews__title {
+    margin: 0 auto 50px;
     font-size: 18px;
     line-height: 23px;
   }
@@ -2758,7 +2759,11 @@ div[id$='-error'] {
   }
 
   .reviews {
-    padding: 40px 0 50px;
+    padding: 40px 0 40px;
+  }
+
+  .reviews__title {
+    margin: 0 auto 40px;
   }
 
   .activities {
