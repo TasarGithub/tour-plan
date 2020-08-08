@@ -1,6 +1,7 @@
 .modal
 	opacity: 0
 	visibility: hidden
+	transition: opacity 0.2s
 	&__overlay
 		position: fixed
 		z-index: 100
@@ -44,13 +45,17 @@
 		width: 100%
 		flex-direction: column
 	&__input
-		flex-basis: 100%
-		margin: 0 0 15px 0
-		border-radius: 4px
 		min-height: 50px
-		color: $text-color
+		width: 100%
+		border-radius: 4px
 		@media screen and ( max-height: 490px)
 			min-height: 30px	
+		&-group
+			flex-basis: 100%
+			margin: 0 0 15px 0
+			border-radius: 4px
+			min-height: 50px
+			color: $text-color
 	&__message
 		margin: 0 0 15px 0
 		@media screen and ( max-height: 490px)
@@ -68,12 +73,24 @@
 		border-radius: 4px
 		@media screen and ( max-height: 490px)
 			padding: 12px 45px
-	&__thanks-block
-		display: none
-		width: 100%
+
 	&--visible
 		opacity: 1
 		visibility: visible
+
+	&__thanks-block
+		height: 300px
+		width: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	&__thanks-wrap
+		display: flex
+		justify-self: center
+		align-items: center
+	&-thanks__title
+		margin: 0 0 30px 0
 // 		font-family: 'Yeseva One', cursive
 // 		font-size: 1.357rem
 // 		text-align: center

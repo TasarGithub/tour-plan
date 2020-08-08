@@ -4,7 +4,7 @@ $mail->CharSet = "UTF-8";
 
 if ($_POST['userEmailSubscribe']<>''){
     // $userName = $_POST['userName'];
-    $userEmail = $_POST['userEmailSubscribe'];
+    $userEmailSubscribe = $_POST['userEmailSubscribe'];
 		// $userPhone = $_POST['userPhone'];
 		//Формирование письма
 		$title = "Новый e-mail для подписки на новости";
@@ -17,31 +17,33 @@ if ($_POST['userEmailSubscribe']<>''){
 }
 
 if ($_POST['userNameFooter']<>''){
-    $userName = $_POST['userNameFooter'];
-		$userPhone = $_POST['userPhoneFooter'];
-		$userMessage = $_POST['userMessageFooter'];
+    $userNameFooter = $_POST['userNameFooter'];
+		$userPhoneFooter = $_POST['userPhoneFooter'];
+		$userMessageFooter = $_POST['userMessageFooter'];
 	 // echo $userName;
 		//Формирование письма
 		$title = "Новое обращение Best Tour Plan";
 		$body = "
 		<h2> Новое обращение </h2>
 		<b></b> $userNameFooter <br>
-		<b> Телефон: </b>  $userPhone <br>
+		<b> Телефон: </b>  $userPhoneFooter <br>
 		<b> Сообщение:</b><br> $userMessageFooter";
 
 }
 
 if ($_POST['userNameModal']<>''){
-	$userName = $_POST['userNameModal'];
-	$userPhone = $_POST['userPhoneModal'];
-	$userMessage = $_POST['userMessageModal'];
+	$userNameModal = $_POST['userNameModal'];
+	$userPhoneModal = $_POST['userPhoneModal'];
+	$userEmailModal = $_POST['userEmailModal'];
+	$userMessageModal = $_POST['userMessageModal'];
  // echo $userName;
 	//Формирование письма
 	$title = "Can I View Other Options?";
 	$body = "
 	<h2> Новое обращение </h2>
-	<b></b> $userName <br>
-	<b> Телефон: </b>  $userPhone <br>
+	<b></b> $userNameModal <br>
+	<b> Телефон: </b>  $userPhoneModal <br>
+	<b> Почта: </b>  $userEmailModal <br>
 	<b> Сообщение:</b><br> $userMessageModal";
 
 }

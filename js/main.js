@@ -41,6 +41,7 @@ $(document).ready(function () {
     //console.log('item: ', item);
 
     $(item).click(function(event) {
+			event.preventDefault();
       var target = event.target;
   
       //console.log('target', target); 
@@ -63,13 +64,13 @@ $(document).ready(function () {
     //   $('#glo_vksubscribe').remove();
     //   $('.modal__title').text('Оставьте заявку и наш менеджер свяжется с вами ');
     // }
-    $('#modal__form').css('display',"flex");
-    $('.modal__title').css('display',"block");
-    $('.modal__thanks-block').css('display',"none");
-    $('.modal__form').css('opacity',1);
-    $('.modal__title').css('opacity',1); 
+    // $('#modal__form').css('display',"flex");
+    // $('.modal__title').css('display',"block");
+    // $('.modal__thanks-block').css('display',"none");
+    // $('.modal__form').css('opacity',1);
+    // $('.modal__title').css('opacity',1); 
 
-    modal.toggleClass('modal--visible');
+    $('.modal__booking').toggleClass('modal--visible');
   });
 
   closeBtn.on('click', function() {
@@ -140,264 +141,178 @@ $(document).ready(function () {
 
 
   //anime
-  new WOW().init();
-
+  // new WOW().init();
+		AOS.init();
 
   // Валидация форм
   //, .footer__form, .control__form
 
   //Замена встроенного метода проверки емейла на лучший , с проверкой точки - это замена из начинки плагина validator
-  $.validator.methods.email = function( value, element ) {
-    return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
-  };
+  // $.validator.methods.email = function( value, element ) {
+  //   return this.optional( element ) || /[A-z0-9._]+@[A-z0-9.-]+\.[a-z]+/.test( value );
+  // };
 
-  // $('#modal__form').validate({
-  //   errorClass: "invalid",
-  //   errorElement: "div",
-  //   rules: {
-  //     // строчное правило simple rule, converted to {required:true}
-  //     userName: {
-  //       required: true,
-  //       minlength: 2,
-  //       maxlength: 15
-  //     },
-  //     userPhone: {
-  //       required: true,
-  //       minlength: 17
-  //     },
-  //     //правило - объект
-  //     userEmail: {
-  //       required: true,
-  //       email: true
-  //     },
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило simple rule, converted to {required:true}
+      userNameModal: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhoneModal: {
+        required: true,
+        minlength: 17
+      },
+      //правило - объект
+      userEmailModal: {
+        required: true,
+        email: true
+      }
 
-  //     modalPolicyCheckbox: {
-  //       required: true
-  //     }
-  //   },
-  //   //сообщения
-  //   messages: {
-  //     userName: {
-  //       required: "Заполните поле",
-  //       minlength: "Имя не короче двух букв",
-  //       maxlength: "Имя не длинее 15ти букв"
-  //     },
-  //     userPhone: {
-  //       required: "Заполните поле",
-  //       minlength: "Введите корректный телефон",
-  //     },      
-  //     userEmail: {
-  //       required: "Заполните поле",
-  //       email: "Введите корректный email"
-  //     },
-  //     modalPolicyCheckbox: {
-  //       required: "Заполните поле"
-  //     }
-  //   },
 
-  //   submitHandler: function(form) {
-  //     $.ajax({
-  //       type: "POST",
-  //       url: "send.php",
-  //       data: $(form).serialize(),
-  //       success: function (response) {
-  //         //console.log('response: ', response);
+    },
+    //сообщения
+    messages: {
+      userNameModal: {
+        required: "fill in the field",
+        minlength: "The name should be > 2 letters",
+        maxlength: "The name should be < 15 letters"
+      },
+      userPhoneModal: {
+        required: "fill in the field",
+        minlength: "fix phone, please",
+      },      
+      userEmailModal: {
+        required: "fill in the field, please",
+        email: "fix email, please"
+      }
+      // modalPolicyCheckbox: {
+      //   required: "fill in the field"
+      // }
+    },
 
-  //         //console.log($(form).serialize());
-  //         $('form')[2].reset();
-  //         modal.removeClass('modal--visible');
-  //         modalThanks.toggleClass('modal--visible');
-  //         ym(62095768,'reachGoal','sendForm');
-  //       },
-  //       erorr: function(response) {
-  //         console.error('Ошибка запроса' + response);
-  //       }
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $('form').serialize(),
+        success: function (response) {
+          //console.log('response: ', response);
+
+          //console.log($(form).serialize());
+          $('form')[4].reset();
+          modal.removeClass('modal--visible');
+          $('.modal__thanks').toggleClass('modal--visible');
+          // ym(62095768,'reachGoal','sendForm');
+        },
+        erorr: function(response) {
+          console.error('Ошибка запроса' + response);
+        }
         
-  //     });
-  //   }
-  // });
+      });
+    }
+  });
 
-  // $('.control__form').validate({
-  //   errorClass: "invalid",
-  //   errorElement: "div",
-  //   rules: {
-  //     // строчное правило simple rule, converted to {required:true}
-  //     userNameControl: {
-  //       required: true,
-  //       minlength: 2,
-  //       maxlength: 15
-  //     },
-  //     userPhoneControl: {
-  //       required: true,
-  //       minlength: 17
-  //     },
-  //     //правило - объект
-  //     userEmailControl: {
-  //       required: true,
-  //       email: true
-  //     },
-  //     controlPolicyCheckbox: {
-  //       required: true
-  //     }
-  //   },
-  //   //сообщения
-  //   messages: {
-  //     userNameControl: {
-  //       required: "Заполните поле",
-  //       minlength: "Имя не короче двух букв",
-  //       maxlength: "Имя не длинее 15ти букв"
-  //     },
-  //     userPhoneControl: {
-  //       required: "Заполните поле",
-  //       minlength: "Исправьте телефон",
-  //     },      
-  //     userEmailControl: {
-  //       required: "Заполните поле",
-  //       email: "Исправьте email"
-  //     },
-  //     controlPolicyCheckbox: {
-  //       required: "Заполните поле"
-  //     }
-  //   },
-  //   submitHandler: function(form) {
-  //     $.ajax({
-  //       type: "POST",
-  //       url: "send.php",
-  //       data: $(form).serialize(),
-  //       success: function (response) {
-  //         //console.log('$(form).serialize()');
-  //         //console.log($(form).serialize());
-  //         //console.log('Ajax сработал. Ответ сервера: ' + response);
-  //         modalThanks.toggleClass('modal--visible');
-  //         //$('.control__form').reset(); не работает, надо именно форма нужна
-  //         $('form')[0].reset();
-  //         ym(62095768,'reachGoal','sendForm');
-  //       }
-  //     });
-  //   }
+  $('.form__subscribe').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило simple rule, converted to {required:true}
 
-  // });
+      //правило - объект
+      userEmailSubscribe: {
+        required: true,
+        email: true
+      }
+    },
+    //сообщения
+    messages: {
+      userEmailSubscribe: {
+        required: "fill in the field",
+        email: "fix email, please"
+      }
 
-  // $('.metering__form').validate({
-  //   errorClass: "invalid",
-  //   errorElement: "div",
-  //   rules: {
-  //     // строчное правило simple rule, converted to {required:true}
-  //     userNameMetering: {
-  //       required: true,
-  //       minlength: 2,
-  //       maxlength: 15
-  //     },
-  //     userPhoneMetering: {
-  //       required: true,
-  //       minlength: 17
-  //     },
-  //     //правило - объект
-  //     userEmailMetering: {
-  //       required: true,
-  //       email: true
-  //     },
-  //     meteringPolicyCheckbox: {
-  //       required: true
-  //     }
-  //   },
-  //   //сообщения
-  //   messages: {
-  //     userNameMetering: {
-  //       required: "Заполните поле",
-  //       minlength: "Имя не короче двух букв",
-  //       maxlength: "Имя не длинее 15ти букв"
-  //     },
-  //     userPhoneMetering: {
-  //       required: "Заполните поле",
-  //       minlength: "Исправьте телефон",
-  //     },      
-  //     userEmailMetering: {
-  //       required: "Заполните поле",
-  //       email: "Исправьте email"
-  //     },
-  //     meteringPolicyCheckbox: {
-  //       required: "Заполните поле"
-  //     }
-  //   },
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $('form').serialize(),
+        success: function (response) {
+          console.log('$(form).serialize()');
+					console.log($(form).serialize());
+					console.log('$(form)[2]: ', $('form')[2]);
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $('.modal__thanks').toggleClass('modal--visible');
+          //$('.control__form').reset(); не работает, надо именно форма нужна
+					$('form')[2].reset();
+	
+					
+          //ym(62095768,'reachGoal','sendForm');
+        }
+      });
+    }
 
-  //   submitHandler: function(form) {
-  //     $.ajax({
-  //       type: "POST",
-  //       url: "send.php",
-  //       data: $(form).serialize(),
-  //       success: function (response) {
-  //         //console.log('response: ', response);
+  });
 
-  //         //$('.modal__form').hide(); //css('display',"none");
-  //         //console.log($(form).serialize());
-  //         $('form')[10].reset();
-  //         //$('.metering__form').reset();
-  //         modal.removeClass('modal--visible');
-  //         modalThanks.toggleClass('modal--visible');
-  //         ym(62095768,'reachGoal','sendForm');
-  //       },
-  //       erorr: function(response) {
-  //         console.error('Ошибка запроса' + response);
-  //       }
-  //     });
-  //   }
-    
-  // });
 
-  // $('.footer__form').validate({
-  //     errorClass: "invalid",
-  //     errorElement: "div",
-  //     rules: {
-  //       // строчное правило simple rule, converted to {required:true}
-  //       userNameFooter: {
-  //         required: true,
-  //         minlength: 2,
-  //         maxlength: 15
-  //       },
-  //       userPhoneFooter: {
-  //         required: true,
-  //         minlength: 17
-  //       },
-  //       //правило - объект
-  //       footerPolicyCheckbox: {
-  //         required: true
-  //       }
-  //     },
-  //     //сообщения
-  //     messages: {
-  //       userNameFooter: {
-  //         required: "Заполните поле",
-  //         minlength: "Имя не короче двух букв",
-  //         maxlength: "Имя не длинее 15ти букв"
-  //       },
-  //       userPhoneFooter: {
-  //         required: "Заполните поле",
-  //         minlength: "Введите корректный телефон",
-  //       },      
-  //       footerPolicyCheckbox: {
-  //         required: "Заполните поле"
-  //       }
-  //     },
+  $('.footer__form').validate({
+      errorClass: "invalid",
+      errorElement: "div",
+      rules: {
+        // строчное правило simple rule, converted to {required:true}
+        userNameFooter: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhoneFooter: {
+          required: true,
+          minlength: 17
+        },
+        //правило - объект
+        // footerPolicyCheckbox: {
+        //   required: true
+        // }
+      },
+      //сообщения
+      messages: {
+        userNameFooter: {
+          required: "fill in the field",
+					minlength: "The name should be > 2 letters",
+					maxlength: "The name should be < 15 letters"
+        },
+        userPhoneFooter: {
+          required: "fill in the field",
+          minlength: "fix phone, please",
+        }      
+        // footerPolicyCheckbox: {
+        //   required: "fill in the field"
+        // }
+      },
 
-  //     submitHandler: function(form) {
-  //       $.ajax({
-  //         type: "POST",
-  //         url: "send.php",
-  //         data: $(form).serialize(),
-  //         success: function (response) {
-  //           //console.log($(form).serialize());
-  //           //console.log('Ajax сработал. Ответ сервера: ' + response);
-  //           $('form')[1].reset();
-  //           //$('.footer__form').reset();
-  //           // // modal.removeClass('modal--visible');
-  //           modalThanks.toggleClass('modal--visible');
-  //           ym(62095768,'reachGoal','sendForm');
-  //         }
-  //       });
-  //     }
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $('form').serialize(),
+          success: function (response) {
+            console.log($(form).serialize());
+            console.log('Ajax сработал. Ответ сервера: ' + response);
+						$('form')[3].reset();
+						$('.modal__thanks').toggleClass('modal--visible');
+            //$('.footer__form').reset();
+            // // modal.removeClass('modal--visible');
+            //modalThanks.toggleClass('modal--visible');
+            //ym(62095768,'reachGoal','sendForm');
+          }
+        });
+      }
 
-  // });
+  });
 
 
 
@@ -414,20 +329,20 @@ $(document).ready(function () {
   ///
 
   //подключение YouTube
-  var player;
-  $('.video__play').on('click', function onYouTubeIframeAPIReady(){
-    player = new YT.Player('player', {
-      height: '100%',
-      width: '100%',
-      videoId: 'TvVYeLvujLk',
-      events: {
-        'onReady': videoPlay,
-      }
-    });
-  });
-  function videoPlay(event) {
-    event.target.playVideo();
-  }
+  // var player;
+  // $('.video__play').on('click', function onYouTubeIframeAPIReady(){
+  //   player = new YT.Player('player', {
+  //     height: '100%',
+  //     width: '100%',
+  //     videoId: 'TvVYeLvujLk',
+  //     events: {
+  //       'onReady': videoPlay,
+  //     }
+  //   });
+  // });
+  // function videoPlay(event) {
+  //   event.target.playVideo();
+  // }
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/TvVYeLvujLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -467,8 +382,10 @@ $(document).ready(function () {
   $('a[href^="#"]').on('click',function (e) {
     e.preventDefault();
     if ( $(this).attr("class").indexOf("totop") < 0) {
-      var id = $(this).attr('href');
-      var    top = $(id).offset().top;
+			var id = $(this).attr('href');
+			console.log('id: ', id);
+			
+      var top = $(id).offset().top;
       if ( $(this).attr("class").indexOf("footer__contacts") > 0){
       $('body,html').animate({
             scrollTop: top - 400

@@ -54,6 +54,20 @@ button
 	overflow: hidden
 	border-radius: 6px
 
+.invalid
+  color: tomato
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+
+div[class$='input-group']
+  position: relative
+
+div[id$='-error']
+  position: absolute
+  right: 0
+  top: -15px
+
 .form
 	position: relative
 	display: flex
