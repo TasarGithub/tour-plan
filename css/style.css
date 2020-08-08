@@ -664,6 +664,7 @@ div[id$='-error'] {
 .navbar__logo {
   display: block;
   max-height: 24px;
+  width: 177px;
 }
 
 .navbar__bottom {
@@ -787,10 +788,6 @@ div[id$='-error'] {
   line-height: 18px;
 }
 
-.logo {
-  width: 177px;
-}
-
 .user {
   display: -webkit-box;
   display: -webkit-flex;
@@ -815,6 +812,7 @@ div[id$='-error'] {
   width: 40px;
   object-fit: cover;
   background: url("../img/user-avatar.jpg") no-repeat center/cover;
+  color: #333333;
 }
 
 .user__name {
@@ -2190,8 +2188,13 @@ div[id$='-error'] {
     max-width: 700px;
   }
 
+  .navbar__logo {
+    width: 132px;
+    margin: 0 15px 0 0;
+  }
+
   .form__search {
-    margin-left: auto;
+    margin-left: 33px;
     min-height: 30px;
   }
 
@@ -2206,14 +2209,6 @@ div[id$='-error'] {
   .menu__link {
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .logo {
-    width: 132px;
-  }
-
-  .logo {
-    width: 99px;
   }
 
   .hotel-body__container {
@@ -2284,15 +2279,11 @@ div[id$='-error'] {
   }
 }
 
-@media screen and (max-width: 786px) {
-  .user__name {
-    margin: 0 0 7px 0;
-    display: inline-block;
-    color: #ffffff;
-  }
-}
-
 @media screen and (max-width: 767px) {
+  body {
+    padding: 78px 0 0 0;
+  }
+
   .body__lock {
     overflow: hidden;
   }
@@ -2308,6 +2299,10 @@ div[id$='-error'] {
     left: 0;
     right: 0;
     z-index: 99;
+  }
+
+  .navbar__logo {
+    width: 99px;
   }
 
   .navbar__bottom {
@@ -2382,6 +2377,12 @@ div[id$='-error'] {
   .user__avatar {
     text-align: center;
     margin: 0 auto 10px;
+  }
+
+  .user__name {
+    margin: 0 0 7px 0;
+    display: inline-block;
+    color: #ffffff;
   }
 
   .mobile-block--invisible {

@@ -27,6 +27,12 @@
 	&__logo
 		display: block
 		max-height: 24px
+		width: 177px // если поставить др картинку, надо чтобы сохранилась размер занимаемого места. Можно не max-width, тк контроль будет на адаптиве в медиазапросах
+		@media screen and ( max-width: 992px)
+			width: 132px
+			margin: 0 15px 0 0 
+		@media screen and ( max-width: 767px)
+			width: 99px
 
 	&__bottom
 		background-color: $dark
@@ -59,7 +65,7 @@
 		margin-left: 108px
 		
 		@media screen and ( max-width: 992px)
-			margin-left: auto
+			margin-left: 33px
 			min-height: 30px
 		@media screen and ( max-width: 767px)
 			width: 245px
@@ -182,14 +188,6 @@
 		line-height: 15px
 
 
-.logo
-	width: 177px // если поставить др картинку, надо чтобы сохранилась размер занимаемого места. Можно не max-width, тк контроль будет на адаптиве в медиазапросах
-	@media screen and ( max-width: 992px)
-		width: 132px
-	@media screen and ( max-width: 992px)
-		width: 99px
-
-
 .user
 	display: flex
 	justify-content: space-between
@@ -205,13 +203,15 @@
 		height: 40px 
 		width: 40px
 		object-fit: cover
-		background: url('../img/user-avatar.jpg') no-repeat center/cover;
+		background: url('../img/user-avatar.jpg') no-repeat center/cover
+		color: $text-color
 		@media screen and ( max-width: 767px)
 			text-align: center
 			margin: 0 auto 10px
 	&__name
 		margin-left: 18px
-		@media screen and ( max-width: 786px)
+		// @media screen and ( max-width: 786px)
+		@media screen and ( max-width: 767px)
 			margin: 0 0 7px 0
 			display: inline-block
 			color: $light
