@@ -41,7 +41,6 @@ $(document).ready(function () {
     //console.log('item: ', item);
 
     $(item).click(function(event) {
-			event.preventDefault();
       var target = event.target;
   
       //console.log('target', target); 
@@ -141,8 +140,8 @@ $(document).ready(function () {
 
 
   //anime
-  // new WOW().init();
-		// AOS.init();
+  //new WOW().init();
+
 
   // Валидация форм
   //, .footer__form, .control__form
@@ -205,7 +204,7 @@ $(document).ready(function () {
           //console.log($(form).serialize());
           $('form')[4].reset();
           modal.removeClass('modal--visible');
-          $('.modal__thanks').toggleClass('modal--visible');
+					$('.modal__thanks').toggleClass('modal--visible');
           // ym(62095768,'reachGoal','sendForm');
         },
         erorr: function(response) {
@@ -246,7 +245,7 @@ $(document).ready(function () {
 					// console.log($(form).serialize());
 					// console.log('$(form)[2]: ', $('form')[2]);
           // console.log('Ajax сработал. Ответ сервера: ' + response);
-          $('.modal-thanks--subscibe').toggleClass('modal--visible');
+          $('.modal__thanks').toggleClass('modal--visible');
           //$('.control__form').reset(); не работает, надо именно форма нужна
 					$('form')[2].reset();
 	
@@ -300,8 +299,8 @@ $(document).ready(function () {
           url: "send.php",
           data: $('form').serialize(),
           success: function (response) {
-            console.log($(form).serialize());
-            console.log('Ajax сработал. Ответ сервера: ' + response);
+            // console.log($(form).serialize());
+            // console.log('Ajax сработал. Ответ сервера: ' + response);
 						$('form')[3].reset();
 						$('.modal__thanks').toggleClass('modal--visible');
             //$('.footer__form').reset();
@@ -378,24 +377,22 @@ $(document).ready(function () {
 
 
   //плавная прокрутка
-
-  $('a[href^="#"]').on('click',function (e) {
-    e.preventDefault();
-    if ( $(this).attr("class").indexOf("totop") < 0) {
-			var id = $(this).attr('href');
-			console.log('id: ', id);
-			
-      var top = $(id).offset().top;
-      if ( $(this).attr("class").indexOf("footer__contacts") > 0){
-      $('body,html').animate({
-            scrollTop: top - 400
-        }, 3000);
-      } else {
-        $('body,html').animate({
-          scrollTop: top  }, 3000);
-      }
-    }
-  });
+//ошибка var id = $(this).attr('href');
+  // $('a[href^="#"]').on('click',function (e) {
+  //   e.preventDefault();
+  //   if ( $(this).attr("class").indexOf("totop") < 0) {
+  //     var id = $(this).attr('href');
+  //     var    top = $(id).offset().top;
+  //     if ( $(this).attr("class").indexOf("footer__contacts") > 0){
+  //     $('body,html').animate({
+  //           scrollTop: top - 400
+  //       }, 3000);
+  //     } else {
+  //       $('body,html').animate({
+  //         scrollTop: top  }, 3000);
+  //     }
+  //   }
+  // });
 
 	// $(window).resize(function (e) {
 	// 	if ($(window).width() <= 768) {

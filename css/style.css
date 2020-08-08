@@ -2078,6 +2078,10 @@ div[id$='-error'] {
   margin: 0 0 30px 0;
 }
 
+.modal-thanks__text {
+  text-align: center;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 960px;

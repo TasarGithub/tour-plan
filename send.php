@@ -54,8 +54,8 @@ if ($_POST['userNameModal']<>''){
 // // echo "userNameMetering", $_POST['userNameMetering'];
 // // echo $_POST['userNameControl'];
 // // echo $_POST['userNameFuter'];
-// echo $body;
-// echo $title;
+echo $body;
+echo $title;
 
 
 // Load Composer's autoloader
