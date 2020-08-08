@@ -3,13 +3,13 @@
 	background-color: #fff
 	// &__wrap
 	// 	margin: 0 0 18px 0
-	&--mobile-fixed
-		@media screen and ( max-width: 768px)
-			position: fixed
-			top: 0
-			left: 0
-			right: 0
-			z-index: 99
+	// &--mobile-fixed
+	@media screen and ( max-width: 767px)
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 99
 
 
 	&__top
@@ -30,7 +30,7 @@
 
 	&__bottom
 		background-color: $dark
-		@media screen and ( max-width: 768px)
+		@media screen and ( max-width: 767px)
 			// display: none
 			position: fixed
 			//top: 78px
@@ -44,7 +44,7 @@
 			overflow: auto
 			transition: all 0.3s ease 0s
 		&--mobile-menu
-			@media screen and ( max-width: 768px)
+			@media screen and ( max-width: 767px)
 				// display: block
 				top: 78px
 
@@ -61,7 +61,7 @@
 		@media screen and ( max-width: 992px)
 			margin-left: auto
 			min-height: 30px
-		@media screen and ( max-width: 768px)
+		@media screen and ( max-width: 767px)
 			width: 245px
 			min-height: 40px
 			margin: 0 auto 19px
@@ -73,7 +73,7 @@
 		background-color: $secondary
 		@media screen and ( max-width: 992px)
 			width: 340px
-		@media screen and ( max-width: 768px)
+		@media screen and ( max-width: 767px)
 			width: 180px
 
 	&-button__search
@@ -92,7 +92,7 @@
 	position: relative
 	width: 16px
 	height: 11px
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: block
 	&::after,&::before
 		content: ''
@@ -140,7 +140,7 @@
 	display: none
 	border: none
 	padding: 0
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: flex
 		flex-direction: column
 		justify-content: space-between
@@ -148,7 +148,7 @@
 		width: 16px
 		height: 1px
 		background-color: $text-color
-		// @media screen and ( max-width: 768px)
+		// @media screen and ( max-width: 767px)
 	&:hover
 		cursor: pointer
 
@@ -161,13 +161,13 @@
 	align-items: center
 	@media screen and ( max-width: 992px)
 		padding: 22px 0
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 
 		flex-direction: column
 		// align-items: center
 		justify-content: center
 	&__item
-		@media screen and ( max-width: 768px)
+		@media screen and ( max-width: 767px)
 			margin: 0 0 20px 0
 
 
@@ -197,7 +197,7 @@
 	max-width: 107px
 	text-decoration: none
 	color: $text-color
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: none
 
 	&__avatar
@@ -206,7 +206,7 @@
 		width: 40px
 		object-fit: cover
 		background: url('../img/user-avatar.jpg') no-repeat center/cover;
-		@media screen and ( max-width: 768px)
+		@media screen and ( max-width: 767px)
 			text-align: center
 			margin: 0 auto 10px
 	&__name
@@ -219,20 +219,20 @@
 
 .mobile-block--invisible
 	display: block
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: none
 
 .mobile-block--visible
 	display: none
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: block
 
 .mobile-flex--invisible
 	display: flex
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: none
 
 .mobile-flex--visible
 	display: none
-	@media screen and ( max-width: 768px)
+	@media screen and ( max-width: 767px)
 		display: flex

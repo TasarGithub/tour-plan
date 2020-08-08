@@ -142,7 +142,7 @@ $(document).ready(function () {
 
   //anime
   // new WOW().init();
-		AOS.init();
+		// AOS.init();
 
   // Валидация форм
   //, .footer__form, .control__form

@@ -2292,11 +2292,7 @@ div[id$='-error'] {
   }
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    padding: 78px 0 0 0;
-  }
-
+@media screen and (max-width: 767px) {
   .body__lock {
     overflow: hidden;
   }
@@ -2306,7 +2302,7 @@ div[id$='-error'] {
     width: 92%;
   }
 
-  .navbar--mobile-fixed {
+  .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -2469,6 +2465,10 @@ div[id$='-error'] {
     padding: 136px 60px 30px 94px;
   }
 
+  .activities__item {
+    width: 44vw;
+  }
+
   .other__container {
     width: 92%;
   }
@@ -2512,12 +2512,6 @@ div[id$='-error'] {
   .footer__form-wrap {
     grid-column: 1 / 4;
     grid-row: 7 / 8;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .activities__item {
-    width: 44vw;
   }
 }
 
