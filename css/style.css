@@ -2277,6 +2277,11 @@ div[id$='-error'] {
   .socialnet__footer-title {
     margin: 0 4.1% 0 0;
   }
+
+  .footer-bottom {
+    margin: 0 auto 0 0;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2790,6 +2795,25 @@ div[id$='-error'] {
 
   .other-big__text {
     display: none;
+  }
+
+  .footer__form-bottom-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .footer__form-requred {
+    margin: 0 0 15px 0;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
   }
 }
 

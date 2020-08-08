@@ -156,12 +156,23 @@
 		border-radius: 0
 		// @media screen and ( max-width: 767px)
 		// 	max-width: 100%
+
 	&__form-title
 		margin: 0 0 34px 0 
 		@media screen and ( max-width: 576px)	
 			flex-basis: 100%
+
+	&__form-bottom-wrap
+		@media screen and ( max-width: 320px)
+			flex-direction: column
+			align-items: flex-start
+
 	&__input
 		padding-top: 0.3rem
+	&__form-requred
+		@media screen and ( max-width: 320px)
+			margin: 0 0 15px 0
+			align-self: flex-start
 
 
 .list 
@@ -294,10 +305,15 @@
 	display: flex
 	justify-content: space-between
 	flex-wrap: wrap
+	@media screen and ( max-width: 992px)
+		margin: 0 auto 0 0
+		max-width: 100%
 	&__text
 		display: flex
 		@media screen and ( max-width: 576px)
 			margin: 0 0 10px 0
+
+
 
 
 		
