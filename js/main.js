@@ -242,11 +242,11 @@ $(document).ready(function () {
         url: "send.php",
         data: $('form').serialize(),
         success: function (response) {
-          console.log('$(form).serialize()');
-					console.log($(form).serialize());
-					console.log('$(form)[2]: ', $('form')[2]);
-          console.log('Ajax сработал. Ответ сервера: ' + response);
-          $('.modal__thanks').toggleClass('modal--visible');
+          // console.log('$(form).serialize()');
+					// console.log($(form).serialize());
+					// console.log('$(form)[2]: ', $('form')[2]);
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          $('.modal-thanks--subscibe').toggleClass('modal--visible');
           //$('.control__form').reset(); не работает, надо именно форма нужна
 					$('form')[2].reset();
 	
