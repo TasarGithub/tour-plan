@@ -462,7 +462,7 @@
 				<form action="send.php" method="POST" class="form form__subscribe form--radius">
 
 						<input 
-						type="mail" 
+						type="email" 
 						class="form-input form-input--290 form-input__subscribe" 
 						placeholder="Your email address"
 						name="userEmailSubscribe"
@@ -780,11 +780,11 @@
 							placeholder="Message" 
 							class="form-message  footer__message footer__input"></textarea>
 
-						<div class="form-bottom-wrap">
+						<div class="form-bottom-wrap footer__form-bottom-wrap">
 							<button class="button footer__button form-button" type="submit">
 								Send
 							</button>
-							<span class="form-requred footer__input-requred">* Required Fields</span>
+							<span class="form-requred footer__form-requred">* Required Fields</span>
 						</div>
 						<!-- /.form-bottom-wrap -->
 				</form>
@@ -820,9 +820,9 @@
 	<!-- /.modal__overlay -->
 	<div class="modal__dialog">
 		<!-- <button class="modal__close"></button> -->
-		<a href="#" class="modal__close"><img src="img/close.svg" alt="icon: close"></a>
+		<a href="#" class="modal__close" id="close-modal__booking"><img src="img/close.svg" alt="icon: close"></a>
 		
-		<h3 class="modal__title modal__title">Booking </h3>
+		<h3 class="modal__title">Booking </h3>
 		<form action="send.php" method="POST" class="form modal__form">
 			<div class="modal__input-group">
 				<input 
@@ -873,7 +873,7 @@
 </div>
 <!-- /.modal -->
 
-<div class="modal modal__thanks" data-close="modal">
+<div class="modal" id="modal__thanks--booking" data-close="modal">
 	<div class="modal__overlay">
 
 	</div>
@@ -881,10 +881,10 @@
 	<!-- /.modal__overlay -->
 	<div class="modal__dialog modal__thanks-wrap">
 		<!-- <button class="modal__close"></button> -->
-		<a href="#" class="modal__close"><img src="img/close.svg" alt="icon: close"></a>
+		<a href="" class="modal__close" id="close-modal__thanks--booking">  <img src="img/close.svg" alt="icon: close"></a>
 		
 		<div class="modal__thanks-block">
-			<h3 class="modal-thanks__title">Thanks </h3>
+			<h3 class="modal-thanks__title">Thanks! </h3>
 			<p class="modal-thanks__text">Our Manager will call you back within 15 minutes</p>
 		</div>
 		<!-- /.modal__thanks-block -->
@@ -892,6 +892,25 @@
 	<!-- /.modal-dialog -->
 </div>
 
+<div class="modal" id="modal-thanks--subscibe" data-close="modal">
+	<div class="modal__overlay">
+
+	</div>
+	
+	<!-- /.modal__overlay -->
+	<div class="modal__dialog modal__thanks-wrap">
+		<!-- <button class="modal__close"></button> -->
+		<a href="" class="modal__close" id="close-modal__thanks--subscribe"><img src="img/close.svg" alt="icon: close"></a>
+		
+
+		<div class="modal__thanks-block">
+			<h3 class="modal-thanks__title">THANK YOU FOR SUBSCRIBING!</h3>
+			<!-- <p class="modal-thanks__text">Our Manager will call you back within 15 minutes</p> -->
+		</div>
+		<!-- /.modal__thanks-block -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
 
 
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>

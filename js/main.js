@@ -23,8 +23,8 @@ $(document).ready(function () {
   formFooter =$('.footer__form'),
   btnControl =$('.control__button'),
   btnFooter =$('.footer__button'),
-  modalBtn = $('[data-toggle="modal"]'),
-  closeBtnThanks = $('.modal-thanks__close'),
+  modalBtn = $('[data-toggle="modal"]');
+  //closeBtnThanks = $('.modal-thanks__close'),
   closeBtn = $('.modal__close');
 
 
@@ -32,23 +32,22 @@ $(document).ready(function () {
     modaljs = document.querySelector('.modal');
 
 
-
-
-
-
   //Close modal windows
   $('[data-close="modal"]').each(function(index, item){
     //console.log('item: ', item);
 
-    $(item).click(function(event) {
-      var target = event.target;
-  
-      //console.log('target', target); 
-     
-          if  ($(target).hasClass("modal--visible")) {
-            $(target).removeClass("modal--visible");
-          }
-    });
+    // $(item).click(function(event) {
+		// 	var target = event.target;
+			
+		// 	console.log('target: ', target);
+		// 	// event.preventDefault();
+    //   //console.log('target', target); 
+
+    //       if  ($(target).hasClass("modal--visible")) {
+    //         $(target).removeClass("modal--visible");
+    //       }
+		// });
+		
     $(document).keydown(function(event) {
       if (event.code === 'Escape' && ( $(item).hasClass("modal--visible"))) {
         $(item).removeClass("modal--visible");
@@ -56,6 +55,19 @@ $(document).ready(function () {
     });
 
   });
+
+	// $('.modal__close').each(function(index, item){
+		
+	// 	$(item).click(function(event) {
+  //     var target = event.target;
+	// 		event.preventDefault();
+	// 		if  ($(target).hasClass("modal--visible")) {
+	// 			$(target).removeClass("modal--visible");
+	// 		}
+
+	// 	});
+
+	// });
 
 
   modalBtn.on('click', function () {
@@ -69,20 +81,33 @@ $(document).ready(function () {
     // $('.modal__form').css('opacity',1);
     // $('.modal__title').css('opacity',1); 
 
-    $('.modal__booking').toggleClass('modal--visible');
+    $('.modal__booking').addClass('modal--visible');
   });
 
-  closeBtn.on('click', function() {
-    modal.removeClass('modal--visible');
-  });
+  // closeBtn.on('click', function() {
+  //   modal.removeClass('modal--visible');
+  // });
 
   
-  closeBtnThanks.on('click', function() {
-    modalThanks.removeClass('modal--visible');
+  // closeBtnThanks.on('click', function() {
+  //   modalThanks.removeClass('modal--visible');
+	// });
+	
+  $('#close-modal__thanks--booking').click(function(event) {
+		event.preventDefault();
+    $('#modal__thanks--booking').removeClass('modal--visible');
+	});
+	
+  $('#close-modal__thanks--subscribe').click(function(event) {
+		event.preventDefault();
+    $('#modal-thanks--subscibe').removeClass('modal--visible');
+	});
+	
+	$('#modal__booking').click (function(event) {
+		event.preventDefault();
+    $('.modal__booking').removeClass('modal--visible');
   });
-
-
-
+	
   let flyInterval,
     count = 1;
 
@@ -204,7 +229,7 @@ $(document).ready(function () {
           //console.log($(form).serialize());
           $('form')[4].reset();
           modal.removeClass('modal--visible');
-					$('.modal__thanks').toggleClass('modal--visible');
+					$('#modal__thanks--booking').toggleClass('modal--visible');
           // ym(62095768,'reachGoal','sendForm');
         },
         erorr: function(response) {
@@ -245,7 +270,7 @@ $(document).ready(function () {
 					// console.log($(form).serialize());
 					// console.log('$(form)[2]: ', $('form')[2]);
           // console.log('Ajax сработал. Ответ сервера: ' + response);
-          $('.modal__thanks').toggleClass('modal--visible');
+          $('#modal-thanks--subscibe').toggleClass('modal--visible');
           //$('.control__form').reset(); не работает, надо именно форма нужна
 					$('form')[2].reset();
 	
