@@ -103,9 +103,9 @@ $(document).ready(function () {
     $('#modal-thanks--subscibe').removeClass('modal--visible');
 	});
 	
-	$('#modal__booking').click (function(event) {
+	$('#close-modal__thanks--message').click (function(event) {
 		event.preventDefault();
-    $('.modal__booking').removeClass('modal--visible');
+    $('#modal__thanks--message').removeClass('modal--visible');
   });
 	
   let flyInterval,
@@ -327,7 +327,7 @@ $(document).ready(function () {
             // console.log($(form).serialize());
             // console.log('Ajax сработал. Ответ сервера: ' + response);
 						$('form')[3].reset();
-						$('.modal__thanks').toggleClass('modal--visible');
+						$('#modal__thanks--message').toggleClass('modal--visible');
             //$('.footer__form').reset();
             // // modal.removeClass('modal--visible');
             //modalThanks.toggleClass('modal--visible');

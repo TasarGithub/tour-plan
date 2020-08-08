@@ -819,22 +819,22 @@ div[id$='-error'] {
   margin-left: 18px;
 }
 
-.mobile-block--invisible {
+.mobile-block-invisible {
   display: block;
 }
 
-.mobile-block--visible {
+.mobile-block-visible {
   display: none;
 }
 
-.mobile-flex--invisible {
+.mobile-flex-invisible {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.mobile-flex--visible {
+.mobile-flex-visible {
   display: none;
 }
 
@@ -2074,11 +2074,11 @@ div[id$='-error'] {
   align-items: center;
 }
 
-.modal-thanks__title {
+.modal__thanks-title {
   margin: 0 0 30px 0;
 }
 
-.modal-thanks__text {
+.modal__thanks-text {
   text-align: center;
 }
 
@@ -2394,19 +2394,19 @@ div[id$='-error'] {
     color: #ffffff;
   }
 
-  .mobile-block--invisible {
+  .mobile-block-invisible {
     display: none;
   }
 
-  .mobile-block--visible {
+  .mobile-block-visible {
     display: block;
   }
 
-  .mobile-flex--invisible {
+  .mobile-flex-invisible {
     display: none;
   }
 
-  .mobile-flex--visible {
+  .mobile-flex-visible {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
