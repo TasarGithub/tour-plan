@@ -1995,8 +1995,6 @@ div[id$='-error'] {
 .modal {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
 }
 
 .modal__overlay {
