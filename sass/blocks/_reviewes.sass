@@ -28,7 +28,7 @@
 
 
 	&__title
-		margin: 0 auto 95px
+		margin: 0 auto 69px
 		text-align: center
 		font-weight: bold
 		font-size: 36px
@@ -43,8 +43,9 @@
 			margin: 0 auto 40px
 
 	&__data
-		max-width: 97px
-		margin: 0px auto -100px
+		position: relative
+		max-width: 102px
+		margin: 0px auto -106px
 		z-index: 10
 
 
@@ -55,6 +56,7 @@
 		background-repeat:  no-repeat
 		background-position: center
 		background-size: cover
+		margin: 0 auto
 		margin-bottom: 9px
 		position: relative
 		&>img
@@ -85,13 +87,32 @@
 			margin-right: -2px
 
 	&__text 
+		position: relative
 		max-width: 731px
 		font-size: 12px
 		line-height: 19px
 		margin: 0 auto
-		padding: 136px 95px 30px 99px
+		padding: 136px 95px 36px 99px
 		background-color: $light
 		border-radius: 8px
+		&::after
+			content: ""
+			width: 70px
+			height: 47px
+			position: absolute
+			background: url('../img/reviews/commas-top.svg') no-repeat center/cover
+			top: 12px
+			left: 64px
+			z-index: 50
+		&::before
+			content: ""
+			position: absolute
+			width: 70px
+			height: 47px
+			background: url('../img/reviews/commas-bottom.svg') no-repeat center/cover
+			bottom: 115px
+			right: 61px
+			z-index: 50
 		@media screen and ( max-width: 992px)
 			max-width: 579px
 		@media screen and ( max-width: 767px)
@@ -99,5 +120,5 @@
 			padding: 136px 60px 30px 94px
 		@media screen and ( max-width: 576px)
 			padding: 136px 33px 30px 29px
-
+			// background: url('../img/reviews/foto-1.jpg') 
 

@@ -1353,7 +1353,7 @@ div[id$='-error'] {
 }
 
 .reviews__title {
-  margin: 0 auto 95px;
+  margin: 0 auto 69px;
   text-align: center;
   font-weight: bold;
   font-size: 36px;
@@ -1363,8 +1363,9 @@ div[id$='-error'] {
 }
 
 .reviews__data {
-  max-width: 97px;
-  margin: 0px auto -100px;
+  position: relative;
+  max-width: 102px;
+  margin: 0px auto -106px;
   z-index: 10;
 }
 
@@ -1375,6 +1376,7 @@ div[id$='-error'] {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
   margin-bottom: 9px;
   position: relative;
 }
@@ -1413,13 +1415,36 @@ div[id$='-error'] {
 }
 
 .reviews__text {
+  position: relative;
   max-width: 731px;
   font-size: 12px;
   line-height: 19px;
   margin: 0 auto;
-  padding: 136px 95px 30px 99px;
+  padding: 136px 95px 36px 99px;
   background-color: #ffffff;
   border-radius: 8px;
+}
+
+.reviews__text::after {
+  content: "";
+  width: 70px;
+  height: 47px;
+  position: absolute;
+  background: url("../img/reviews/commas-top.svg") no-repeat center/cover;
+  top: 12px;
+  left: 64px;
+  z-index: 50;
+}
+
+.reviews__text::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 47px;
+  background: url("../img/reviews/commas-bottom.svg") no-repeat center/cover;
+  bottom: 115px;
+  right: 61px;
+  z-index: 50;
 }
 
 .activities {
