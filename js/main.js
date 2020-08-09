@@ -14,6 +14,11 @@
 //   closeBtn.addEventListener('click', switchModal);
 // });
 
+// window.onload = function () {
+// 	aload();
+	
+// };
+
 $(document).ready(function () {
 
   var modal =$('.modal'),
@@ -444,6 +449,14 @@ $(document).ready(function () {
 		$('.navbar__bottom').toggleClass('navbar__bottom--mobile-menu');
 		$('.navbar__burger').toggleClass('active');
 		$('body').toggleClass('body__lock');
+	});
+
+
+//загрузка гуглкарты при клике наведении мышкой
+	$('.map').click(function (e){
+
+		$('#google-map').css('display',"block");
+
 	});
 
 

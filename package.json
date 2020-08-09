@@ -41,6 +41,7 @@
     "gulp-wait": "0.0.2"
   },
   "dependencies": {
+    "aload": "^1.2.3",
     "browser-sync": "^2.26.12",
     "gulp-htmlmin": "^5.0.1",
     "gulp-tinypng-compress": "^1.2.5"
