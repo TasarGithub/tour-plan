@@ -108,6 +108,10 @@ $(document).ready(function () {
     $('#modal__thanks--message').removeClass('modal--visible');
   });
 	
+	$('#close-modal__booking').click (function(event) {
+		event.preventDefault();
+    $('.modal__booking').removeClass('modal--visible');
+  });
   let flyInterval,
     count = 1;
 
