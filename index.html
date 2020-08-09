@@ -450,31 +450,34 @@
 </section>
 <!-- /.other -->
 
-<section class="subscribe parallax-window" data-parallax="scroll" data-image-src="img/bg-subscribe.jpg">
-	<div class="subscribe__container">
-		<h2 class="subscribe__text">
-			<span class="subtitle subscribe__subtitle">
-				subscribe to our
-			</span>
-			<strong class="title subscribe__title">Newsletter</strong>
-		</h2>
-		<!-- /.subscribe__text -->
+<section subscribe>
+	<div class="subscribe__wrap parallax-window" data-parallax="scroll" data-image-src="img/bg-subscribe.jpg"">
+		<div class="subscribe__container">
+			<h2 class="subscribe__text">
+				<span class="subtitle subscribe__subtitle">
+					subscribe to our
+				</span>
+				<strong class="title subscribe__title">Newsletter</strong>
+			</h2>
+			<!-- /.subscribe__text -->
+		
+					<form action="send.php" method="POST" class="form form__subscribe form--radius">
 	
-				<form action="send.php" method="POST" class="form form__subscribe form--radius">
-
-						<input 
-						type="email" 
-						class="form-input form-input--290 form-input__subscribe" 
-						placeholder="Your email address"
-						name="userEmailSubscribe"
-						>
-					<button class="button form-button form-button__subscribe" type="submit">
-							Send
-					</button>
-				</form>
-				<!-- /.subscribe__form -->
-
+							<input 
+							type="email" 
+							class="form-input form-input--290 form-input__subscribe" 
+							placeholder="Your email address"
+							name="userEmailSubscribe"
+							>
+						<button class="button form-button form-button__subscribe" type="submit">
+								Send
+						</button>
+					</form>
+					<!-- /.subscribe__form -->
+	
+		</div>
 	</div>
+	<!-- /.subscribe__wrap -->
 
 	<!-- /.subscribe__container -->
 </section>
