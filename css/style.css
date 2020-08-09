@@ -1755,7 +1755,7 @@ div[id$='-error'] {
 }
 
 .footer__wrap {
-  margin: 0 auto 63px;
+  margin: 0 auto 104px;
   display: grid;
   grid-template-columns: 275px  270px  331px 194px;
   grid-template-rows: 1fr 40px 93px;
