@@ -1269,14 +1269,6 @@ div[id$='-error'] {
   position: relative;
   background: transparent;
   min-height: 260px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .subscribe__wrap::before {
@@ -1290,7 +1282,8 @@ div[id$='-error'] {
 }
 
 .subscribe__container {
-  width: 731px;
+  max-width: 731px;
+  min-height: 260px;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2606,12 +2599,16 @@ div[id$='-error'] {
 
 @media screen and (max-width: 680px) {
   .subscribe__container {
-    max-width: none;
+    max-width: 92%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
