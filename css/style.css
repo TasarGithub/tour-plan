@@ -1269,6 +1269,7 @@ div[id$='-error'] {
   position: relative;
   background: transparent;
   min-height: 260px;
+  width: 100%;
 }
 
 .subscribe__wrap::before {
@@ -1283,6 +1284,7 @@ div[id$='-error'] {
 
 .subscribe__container {
   max-width: 731px;
+  width: 92%;
   min-height: 260px;
   margin: 0 auto;
   display: -webkit-box;
@@ -1557,8 +1559,7 @@ div[id$='-error'] {
 .other__grid {
   display: grid;
   grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(2, minmax(500px, -webkit-max-content));
-  grid-template-rows: repeat(2, minmax(500px, max-content));
+  grid-template-rows: repeat(2, 500px);
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1568,11 +1569,12 @@ div[id$='-error'] {
 
 .other-body {
   width: 364px;
-  padding: 41px 21px 30px 44px;
+  padding: 41px 21px 25px 44px;
   background-color: #0A223D;
   color: #ffffff;
   border-radius: 0 8px 8px 0;
-  overflow: hidden;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .other-big {
@@ -1582,6 +1584,7 @@ div[id$='-error'] {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: auto;
 }
 
 .other-big__info-room {
@@ -2160,7 +2163,7 @@ div[id$='-error'] {
   }
 
   .activities__item:nth-child(3) {
-    margin: 0 20px 0 0;
+    margin: 0 20px 20px 0;
   }
 
   .other__container {
@@ -2371,7 +2374,7 @@ div[id$='-error'] {
   }
 
   .navbar__bottom--mobile-menu {
-    top: 78px;
+    top: 70px;
   }
 
   .form__search {
@@ -2477,17 +2480,19 @@ div[id$='-error'] {
   }
 
   .swiper-button--reviews-prev {
-    top: 38px;
-    left: 47%;
-    -webkit-transform: translateX(-105px);
-    transform: translateX(-105px);
+    top: 31px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-left: -29%;
   }
 
   .swiper-button--reviews-next {
-    top: 38px;
-    right: 47%;
-    -webkit-transform: translateX(85px);
-    transform: translateX(85px);
+    top: 31px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    margin-right: -29%;
   }
 
   .booking {
@@ -2495,11 +2500,11 @@ div[id$='-error'] {
   }
 
   .subscribe {
-    padding: 92px 34px 93px;
+    padding: 92px 0 93px;
   }
 
   .reviews {
-    padding: 40px 0 60px;
+    padding: 40px 0 40px;
   }
 
   .reviews__container {
@@ -2647,7 +2652,7 @@ div[id$='-error'] {
   }
 
   .subscribe {
-    padding: 76px 20px 83px;
+    padding: 76px 0 83px;
   }
 
   .form-input__subscribe {
